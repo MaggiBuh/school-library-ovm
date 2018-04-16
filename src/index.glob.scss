@@ -1,8 +1,37 @@
 @import '../node_modules/@plentymarkets/terra-components/app/assets/styles/icons.glob.scss';
-@import '../node_modules/@plentymarkets/terra-components/index.glob.scss';
 
-body
+.profile_container
 {
-    background-color: white !important;
-    overflow-y: hidden;
+    .top_champs
+    {
+        img
+        {
+            width: 70px;
+            height: 70px;
+        }
+    }
+    
+    .first
+    {
+        img
+        {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+.matches_container_wrapper
+{
+    .matches_container
+    {
+        .match_container
+        {
+            img
+            {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
 }
