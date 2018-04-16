@@ -3,7 +3,7 @@ import {
     NgModule
 } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { StartPageComponent } from './startpage';
+import { StartPageComponent } from './startpage.component';
 import { TerraComponentsModule } from '@plentymarkets/terra-components/app/terra-components.module';
 import { HttpModule } from '@angular/http';
 import { TranslationModule } from 'angular-l10n';
