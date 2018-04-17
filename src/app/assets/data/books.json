@@ -1,0 +1,83 @@
+[
+	{
+		"id": 1,
+		"title": "Linux - Das umfassende Handbuch",
+		"author": "Michael Kofler",
+		"publisher": "Rheinwerk Computing",
+		"description": "»Der Kofler«: der Standard in Sachen Linux! Ob als Einsteiger oder erfahrener »Linuxer« – mit diesem Buch bleiben keine Fragen offen. Von der Installation und den verschiedenen Benutzeroberflächen über die Arbeit im Terminal, die Systemkonfiguration und -administration bis hin zum sicheren Einsatz als Server – hier werden Sie fündig! Distributionsunabhängig, vollständig überarbeitet und mit Kapitel zum Raspberry Pi 3 natürlich am Puls der Zeit: So präsentiert sich Ihnen dieser Klassiker beim Rheinwerk Verlag.",
+		"imageUrl": "https://s3-eu-west-1.amazonaws.com/cover2.galileo-press.de/print/9783836258548_171_2d.jpg"
+	},
+	{
+		"id": 2,
+		"title": "Schrödinger programmiert C#",
+		"author": "Bernhard Wurm",
+		"publisher": "Rheinwerk Computing",
+		"description": "Schrödinger ist unser Mann fürs Programmieren. Er kann schon was, aber noch nicht C#. Zum Glück hat er einen richtigen Profi an seiner Seite, der auf jede Frage eine Antwort weiß. Und weil Schrödinger zwar schlau ist, aber auch ein wenig ungeduldig, gibt es nach der nötigen Theorie immer sofort etwas zu tun. Mit viel Code und Beispielen, die du nicht wieder vergisst. Ob es ums Einparken ohne Crash geht oder um Schuhschränke, die immer größer werden: Die Übungen schafft ihr (aber nicht immer mit links), die Pausen sind verdient, und am Ende jedes Kapitels dürft ihr euch einen Spickzettel einstecken - Achievement Unlocked, Ready for Next Level. Fantastisch illustriert. Für Einsteiger, Umsteiger und Fans.",
+		"imageUrl": "https://s3-eu-west-1.amazonaws.com/cover2.galileo-press.de/print/9783836240932_171_2d.jpg"
+	},
+	{
+		"id": 3,
+		"title": "Praxiseinstieg Machine Learning mit Scikit-Learn und TensorFlow",
+		"author": "Aurélien Géron",
+		"publisher": "O’Reilly",
+		"description": "Durchbrüche beim Deep Learning haben das maschinelle Lernen in den letzten Jahren eindrucksvoll vorangebracht. Inzwischen können sogar Programmierer, die kaum etwas über diese Technologie wissen, mit einfachen, effizienten Werkzeugen Machine-Learning-Programme implementieren. Dieses praxisorientierte Buch zeigt Ihnen wie. Mit konkreten Beispielen, einem Minimum an Theorie und zwei unmittelbar anwendbaren Python-Frameworks – Scikit-Learn und TensorFlow – verhilft Ihnen der Autor Aurélien Géron zu einem intuitiven Verständnis der Konzepte und Tools für das Entwickeln intelligenter Systeme. Sie lernen eine Vielzahl von Techniken kennen, beginnend mit einfacher linearer Regression bis hin zu neuronalen Netzen. Übungen zu jedem Kapitel helfen Ihnen, das Gelernte in die Praxis umzusetzen. Sie benötigen lediglich etwas Programmiererfahrung, um direkt zu starten. - Entdecken Sie Machine Learning, insbesondere neuronale Netze und das Deep Learning - Verwenden Sie Scikit-Learn, um ein Machine-Learning-Beispielprojekt vom Anfang bis zum Ende nachzuvollziehen - Erkunden Sie verschiedene trainierbare Modelle, darunter Support Vector Machines, Entscheidungsbäume, Random Forests und Ensemble-Methoden - Nutzen Sie die Bibliothek TensorFlow, um neuronale Netze zu erstellen und zu trainieren - Lernen Sie Architekturen neuronaler Netze kennen, darunter Convolutional Nets, Recurrent Nets und Deep Reinforcement Learning - Eignen Sie sich Techniken zum Trainieren und Skalieren von neuronalen Netzen an - Wenden Sie Codebeispiele an, ohne exzessiv die Theorie von Machine Learning oder die Algorithmik durcharbeiten zu müssen Dieses Buch ist eine ausgezeichnete Einführung in Theorie und Praxis der Problemlösung mit neuronalen Netzen. Es behandelt alle Kernpunkte, die Sie zum Entwickeln effektiver Anwendungen benötigen, und gibt Ihnen genug Hintergrundwissen, um die neuesten Forschungsergebnisse zu verstehen. Ich kann dieses Buch jedem empfehlen, der sich für die Praxis von ML interessiert. — Pete Warden, Mobile Lead bei TensorFlow",
+		"imageUrl": "https://www.oreilly.de/common/images/cover_masterid/160/13111.jpg"
+	},
+	{
+		"id": 4,
+		"title": "Pflanz dich glücklich 37 Ideen für Garten & Co.",
+		"author": "Silke Schmidt",
+		"publisher": "dtv junior",
+		"description": "37 Ideen rund um Garten und Pflanzen: Fensterbank verschönern, mit Pflanzenblättern drucken, mit Blütenblättern Bilder gestalten, Kosmetik aus Obst und Gemüse herstellen, herausfinden, welche Blüten man essen kann, Vasen und Blumentöpfe upcyclen und vieles mehr.",
+		"imageUrl": "https://www.dtv.de/_cover_media/450b/9783423717731.jpg?20171216110916"
+	},
+	{
+		"id": 5,
+		"title": "Holyge Bimbel",
+		"author": "Shahak Shapira",
+		"publisher": "Rowohlt Verlag GmbH",
+		"description": "1 flyes Book für den trendbewussten Yolo-Swagger, der schon alles hant. Endlich können wirklich alle die Bibel lesen: die heilige Schrift in Internetdeutsch. Die bestesten Stories aus dem freshen u old school Tastyment oversetzt, incl. Bimbel Allstarz wie Jesus Chrispus, Moses Def, Adolf & Eva, Jona Hill, A-Broham u numberreiche weitere Larrys!",
+		"imageUrl": "http://t3.gstatic.com/images?q=tbn:ANd9GcRIc1ZR4pkxUxf2pNFK4R1Dp62dbdIeRUrKPjjbtk7Lp42x8GtG"
+	},
+	{
+		"id": 6,
+		"title": "Warum feiern wir Weihnachten?",
+		"author": "Volker Ufertinger",
+		"publisher": "DVA",
+		"description": "Weihnachten ist das Fest der Familie, der Geschenke und der großen Fragen: Wurde Jesus wirklich am 24. Dezember des Jahres Null in Bethlehem geboren? Wer waren die Heiligen Drei Könige? Worin unterscheiden sich eigentlich Christkind, Nikolaus und Weihnachtsmann? Feiert man in Afrika vielleicht unter einer Weihnachtspalme? Die Kinder-Uni weiß auch hier die Antworten. Anschaulich und gescheit erzählen Ulla Steuernagel und Ulrich Janßen, warum Tannenbäume geschmückt, Geschenke in Amerika am 25. Dezember ausgepackt werden – und weshalb Weihnachten das schönste Fest der Welt ist.",
+		"imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51vfXx%2BjRQL._SX348_BO1,204,203,200_.jpg"
+	},
+	{
+		"id": 7,
+		"title": "Handbuch KörperManagement",
+		"author": "Bernd Gimbel",
+		"publisher": "rororo",
+		"description": "-",
+		"imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51zmxNhdI4L._SX358_BO1,204,203,200_.jpg"
+	},
+	{
+		"id": 8,
+		"title": "Die Braut des Magiers 01",
+		"author": "Kore Yamazaki",
+		"publisher": "Tokiopop",
+		"description": "Chise ist erst 16 Jahre alt, hat jedoch in ihrem Leben schon einige Schicksalsschläge erlitten. Seit ihre Mutter sich umgebracht hat, wird sie immer wieder als Sklavin verkauft. Doch das Schicksal wendet sich, als der Magier Ellias sie bei einer Auktion ersteigert und als seinen Lehrling bei sich aufnimmt. Und auch Chise selbst scheint über magische Fähigkeiten zu verfügen. Aber welche Pläne verfolgt der mysteriöse Ellias wirklich.?",
+		"imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51RrB%2B3-yyL._SX334_BO1,204,203,200_.jpg"
+	},
+	{
+		"id": 9,
+		"title": "Die Braut des Magiers 02",
+		"author": "Kore Yamazaki",
+		"publisher": "Tokiopop",
+		"description": "Chise beginnt sich an ihr Leben bei Elias zu gewöhnen, doch das Zusammenleben der beiden scheint vielen anderen ein Dorn im Auge zu sein. So versuchen übersinnliche Mächte, die beiden voneinander zu trennen, was sie aber letztlich immer mehr zusammenschweißt.",
+		"imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61SI5V0nrLL._SX334_BO1,204,203,200_.jpg"
+	},
+	{
+		"id": 10,
+		"title": "Die Braut des Magiers 03",
+		"author": "Kore Yamazaki",
+		"publisher": "Tokiopop",
+		"description": "Chise beginnt sich an ihr Leben bei Elias zu gewöhnen, doch das Zusammenleben der beiden scheint vielen anderen ein Dorn im Auge zu sein. So versuchen übersinnliche Mächte, die beiden voneinander zu trennen, was sie aber letztlich immer mehr zusammenschweißt.",
+		"imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61JmiukMaYL._SX334_BO1,204,203,200_.jpg"
+	}
+
+]

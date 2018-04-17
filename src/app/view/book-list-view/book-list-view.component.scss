@@ -1,0 +1,42 @@
+.header
+{
+    margin: 0 0 10px 0;
+    .profile
+    {
+        float: right;
+        .username
+        {
+            margin-right: 10px;
+            float: left;
+        }
+    }
+}
+
+.book-container
+{
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    .book-info
+    {
+        margin: 0;
+        padding: 0;
+        .book-image
+        {
+            margin: 0;
+            padding: 0;
+            border-radius: 10px;
+            img
+            {
+                width: 100px;
+            }
+        }
+    }
+}
+
+.vcenter
+{
+    display: flex;
+    align-items: center;
+}

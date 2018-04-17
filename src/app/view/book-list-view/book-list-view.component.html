@@ -1,0 +1,50 @@
+<div>
+    <div class="row header">
+        <div class="col-md-6 vcenter">
+            <h1>School Libary</h1>
+        </div>
+        <div class="col-md-6 text-md-right">
+            <div class="profile vcenter">
+                <div class="username">Tobias Wagner</div>
+                <terra-button ngClass="profile-button"
+                              inputIcon="icon-user_my_account"
+                              inputIsLarge="true">
+                </terra-button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="search-bar-container">
+    <div>
+        <terra-portlet ngClass="search-portlet">
+            <terra-text-input [(ngModel)]="_searchValue"
+                              (ngModelChange)="checkInput()"
+                              inputName="book search">
+            </terra-text-input>
+        </terra-portlet>
+    </div>
+</div>
+<div class="books-wrapper">
+    <div class="books-container" *ngFor="let book of _books">
+        <div class="book-container" id="{{book.id +'_container'}}">
+            <div class="row book-info">
+                <div class="col-md-1 book-image">
+                    <img src={{book.imageUrl}}>
+                </div>
+                <div class="col-md-11 row book-info vcenters">
+                    <div class="col-md-2 book-info-data">
+                        <h1>{{book.title}}</h1>
+                        <div>Author: {{book.author}}</div>
+                        <div>Verlag: {{book.publisher}}</div>
+                    </div>
+                    <div class="col-md-5 book-info-description vcenter">
+                        <div>
+                            <div>Beschreibung:</div>
+                            <div class="">{{book.description}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
