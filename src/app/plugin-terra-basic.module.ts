@@ -16,15 +16,24 @@ import {
     RouterModule,
     Routes
 } from '@angular/router';
+import { PhpConnectionHelper } from './view/php-connection-helper/php-connection-helper';
 
 const appRoutes:Routes = [
+    {
+        path:      'registrierung',
+        component: UserRegisterViewComponent
+    },
     {
         path:      'login',
         component: UserLoginViewComponent
     },
     {
+        path:      'home',
+        component: BookListViewComponent
+    },
+    {
         path:       '',
-        redirectTo: 'login',
+        redirectTo: '/home',
         pathMatch:  'full'
     },
 ];
@@ -47,6 +56,7 @@ const appRoutes:Routes = [
         UserRegisterViewComponent
     ],
     providers:    [
+        PhpConnectionHelper,
         LocalizationConfig,
         {
             provide:    APP_INITIALIZER,
@@ -56,9 +66,7 @@ const appRoutes:Routes = [
         }
     ],
     bootstrap:    [
-        PluginTerraBasicComponent,
-        BookListViewComponent,
-        UserLoginViewComponent
+        PluginTerraBasicComponent
     ]
 })
 export class PluginTerraBasicModule
