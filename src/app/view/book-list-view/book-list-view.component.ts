@@ -26,18 +26,21 @@ export class BookListViewComponent implements OnInit
         this.getAllBooks().subscribe((res:any) =>
         {
             this._books = res.json();
+            this.checkIfBookDescriptionHasLengthLimit();
         });
     }
 
     public checkInput():void
     {
         let searchValue:string = this._searchValue.toLowerCase();
+        searchValue = searchValue.replace(/\s/g, '');
 
         if(!isNullOrUndefined(searchValue) && searchValue !== '')
         {
             this._books.forEach(book =>
             {
                 let bookTitle:string = book.title.toLowerCase();
+                bookTitle = bookTitle.replace(/\s/g, '');
                 if(!isNullOrUndefined(book.title) && book.title !== '')
                 {
                     if(bookTitle.includes(searchValue))
@@ -67,11 +70,32 @@ export class BookListViewComponent implements OnInit
         }
     }
 
-    public getAllBooks():Observable<any>
+    private getAllBooks():Observable<any>
     {
         let url:string = 'src/app/assets/data/books.json';
 
         return this._http.get(url);
+    }
+
+    private checkIfBookDescriptionHasLengthLimit():void
+    {
+        this._books.forEach(book =>
+        {
+            if(book.description.length > 400)
+            {
+                book.description = book.description.substring(0, 400);
+                let lastIndex:number = book.description.lastIndexOf(' ');
+                book.description = book.description.substring(0, lastIndex);
+                book.description += '... <i class="more">[Mehr]</i>'
+            }
+            else
+            {
+                if(book.description === '')
+                {
+                    book.description = 'Keine Beschreibung.';
+                }
+            }
+        });
     }
 
 }
