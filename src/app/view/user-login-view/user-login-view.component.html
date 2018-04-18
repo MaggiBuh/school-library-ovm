@@ -1,25 +1,44 @@
-<div class="login-wrapper">
-    <div class="login-container">
-        <terra-portlet>
-            <h1>Anmelden</h1>
-            <div class="login-inputs">
-                <terra-text-input inputName="Username">
-                </terra-text-input>
+<div>
+    <div class="row header">
+        <div class="col-md-7 vcenter">
+            <h1>School Libary</h1>
+        </div>
+        <div class="col-md-5 text-md-right">
+            <div *ngIf="_loggedIn" class="profile vcenter">
+                <div class="username">{{_currentUser.userName}}</div>
+                <terra-button-with-options ngClass="profile-button"
+                                           inputIcon="icon-user_my_account"
+                                           inputOptionsAlignment="left"
+                                           [inputOptions]="_buttonOptionList">
+                </terra-button-with-options>
             </div>
-            <div class="login-inputs">
-                <terra-text-input inputName="Passwort"
-                                  [inputIsPassword]=true>
-                </terra-text-input>
+            <div *ngIf="!_loggedIn">
+                <terra-portlet>
+                    <div class="custom-row login-form">
+                        <div class="col-md-5">
+                            <terra-text-input inputName="Username"
+                                              [(ngModel)]="_userName">
+                            </terra-text-input>
+                        </div>
+                        <div class="col-md-5">
+                            <terra-text-input inputName="Passwort"
+                                              [(ngModel)]="_password"
+                                              [inputIsPassword]=true>
+                            </terra-text-input>
+                        </div>
+                        <div class="col-md-2">
+                            <terra-button inputCaption="Login"
+                                          (outputClicked)="validateDataAndLogin(_userName, _password)">
+                            </terra-button>
+                        </div>
+                    </div>
+                    <div class="custom-rom registration-link">
+                        <div class="col-md-12 text-md-left">
+                            <a routerLink="/registrierung" routerLinkActive="active">Neues Konto erstellen</a>
+                        </div>
+                    </div>
+                </terra-portlet>
             </div>
-            <div class="row login-footer">
-                <div class="text-md-left col-md-6 register-link">
-                    <a routerLink="/registrierung" routerLinkActive="active">Neues Konto erstellen</a>
-                </div>
-                <div class="text-md-right col-md-6">
-                    <terra-button inputCaption="Anmelden">
-                    </terra-button>
-                </div>
-            </div>
-        </terra-portlet>
+        </div>
     </div>
 </div>

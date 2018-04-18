@@ -1,28 +1,38 @@
-.login-wrapper
+.header
 {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    .login-container
+    margin: 0 0 10px 0;
+    .login-form
     {
-        width: 400px;
-        .login-inputs
+        margin-bottom: 5px;
+    }
+    
+    .registration-link
+    {
+        a
         {
-            margin-bottom: 10px;
+            text-decoration: none;
         }
-        .login-footer
+    }
+    
+    .profile
+    {
+        float: right;
+        .username
         {
-            margin: 0;
-            .register-link
-            {
-                align-items: center;
-                display: flex;
-                a
-                {
-                    text-decoration: none;
-                }
-            }
+            margin-right: 10px;
+            float: left;
         }
+    }
+    
+    .vcenter
+    {
+        display: flex;
+        align-items: center;
+    }
+    
+    .custom-row
+    {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
