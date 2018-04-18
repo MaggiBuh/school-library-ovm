@@ -7,7 +7,10 @@ body
     padding: 15px !important;
 }
 
-body::-webkit-scrollbar { width: 0 !important }
+body::-webkit-scrollbar
+{
+    width: 0 !important
+}
 
 .search-portlet
 {
@@ -22,14 +25,18 @@ body::-webkit-scrollbar { width: 0 !important }
     .btn-handler
     {
         width: 45px !important;
-        button.btn-lg
-        {
-            border-radius: 22px;
-        }
+    }
+}
+
+.login-form
+{
+    .btn-handler
+    {
+        width: 100% !important;
     }
 }
 
 .more
 {
-    color: #9e9e9e !important;
+    color: #9E9E9E !important;
 }
