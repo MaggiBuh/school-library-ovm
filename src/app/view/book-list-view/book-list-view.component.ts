@@ -72,7 +72,7 @@ export class BookListViewComponent implements OnInit
 
     private getAllBooks():Observable<any>
     {
-        let url:string = 'src/app/assets/data/books.json';
+        let url:string = 'assets/data/books.json';
 
         return this._http.get(url);
     }
