@@ -1,0 +1,28 @@
+.login-wrapper
+{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .login-container
+    {
+        width: 400px;
+        .login-inputs
+        {
+            margin-bottom: 10px;
+        }
+        .login-footer
+        {
+            margin: 0;
+            .register-link
+            {
+                align-items: center;
+                display: flex;
+                a
+                {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

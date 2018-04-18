@@ -10,6 +10,24 @@ import { TranslationModule } from 'angular-l10n';
 import { FormsModule } from '@angular/forms';
 import { LocalizationConfig } from './core/localization/terra-localization.config';
 import { BookListViewComponent } from './view/book-list-view/book-list-view.component';
+import { UserLoginViewComponent } from './view/user-login-view/user-login-view.component';
+import { UserRegisterViewComponent } from './view/user-login-view/user-register-view/user-register-view.component';
+import {
+    RouterModule,
+    Routes
+} from '@angular/router';
+
+const appRoutes:Routes = [
+    {
+        path:      'login',
+        component: UserLoginViewComponent
+    },
+    {
+        path:       '',
+        redirectTo: 'login',
+        pathMatch:  'full'
+    },
+];
 
 @NgModule({
     imports:      [
@@ -17,11 +35,16 @@ import { BookListViewComponent } from './view/book-list-view/book-list-view.comp
         HttpModule,
         FormsModule,
         TranslationModule.forRoot(),
-        TerraComponentsModule.forRoot()
+        TerraComponentsModule.forRoot(),
+        RouterModule.forRoot(
+            appRoutes
+        )
     ],
     declarations: [
         PluginTerraBasicComponent,
         BookListViewComponent,
+        UserLoginViewComponent,
+        UserRegisterViewComponent
     ],
     providers:    [
         LocalizationConfig,
@@ -34,7 +57,8 @@ import { BookListViewComponent } from './view/book-list-view/book-list-view.comp
     ],
     bootstrap:    [
         PluginTerraBasicComponent,
-        BookListViewComponent
+        BookListViewComponent,
+        UserLoginViewComponent
     ]
 })
 export class PluginTerraBasicModule

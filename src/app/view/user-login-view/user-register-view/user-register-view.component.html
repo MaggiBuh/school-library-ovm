@@ -1,0 +1,40 @@
+<div class="register-wrapper">
+    <div class="register-container">
+        <terra-portlet>
+            <h1>Registrieren</h1>
+            <div class="register-inputs">
+                <terra-text-input inputName="Vorname">
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="Nachname">
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="Username">
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="Passwort"
+                                  [inputIsPassword]=true>
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="Passwort wiederholen"
+                                  [inputIsPassword]=true>
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="E-Mail">
+                </terra-text-input>
+            </div>
+            <div class="row register-footer">
+                <div class="text-md-right col-md-12 submit-button">
+                    <terra-button inputCaption="Registrieren"
+                                  (outputClicked)="validateAndSafe()">
+                    </terra-button>
+                </div>
+            </div>
+        </terra-portlet>
+    </div>
+</div>

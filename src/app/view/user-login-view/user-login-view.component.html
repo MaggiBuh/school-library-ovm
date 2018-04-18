@@ -1,0 +1,25 @@
+<div class="login-wrapper">
+    <div class="login-container">
+        <terra-portlet>
+            <h1>Anmelden</h1>
+            <div class="login-inputs">
+                <terra-text-input inputName="Username">
+                </terra-text-input>
+            </div>
+            <div class="login-inputs">
+                <terra-text-input inputName="Passwort"
+                                  [inputIsPassword]=true>
+                </terra-text-input>
+            </div>
+            <div class="row login-footer">
+                <div class="text-md-left col-md-6 register-link">
+                    <a routerLink="/registrierung" routerLinkActive="active">Neues Konto erstellen</a>
+                </div>
+                <div class="text-md-right col-md-6">
+                    <terra-button inputCaption="Anmelden">
+                    </terra-button>
+                </div>
+            </div>
+        </terra-portlet>
+    </div>
+</div>
