@@ -1,0 +1,29 @@
+.user-profile-container
+{
+    border-bottom: 1px solid;
+    .user-profile
+    {
+        margin-bottom: 20px;
+        .user-image
+        {
+            img
+            {
+                width: 150px;
+                border-radius: 100px;
+                border: 1px solid;
+            }
+        }
+        .user-info
+        {
+            .user-name
+            {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.books
+{
+    margin-top: 20px;
+}

@@ -1,14 +1,26 @@
-import { Component } from '@angular/core';
+import {
+    Component,
+    OnInit
+} from '@angular/core';
+import { DataStorageConfig } from '../data/data-storage.config';
 
 @Component({
-    selector: 'plugin-terra-basic-app',
-    template: require('./plugin-terra-basic.component.html'),
-    styles:   [require('./plugin-terra-basic.component.scss')],
+    selector: 'user-profile-view',
+    template: require('./user-profile-view.component.html'),
+    styles:   [require('./user-profile-view.component.scss')],
 })
-export class PluginTerraBasicComponent
+export class UserProfileViewComponent implements OnInit
 {
-    public constructor()
-    {
 
+    private _currentUser:Array<any> = [];
+
+    public constructor(private _storageConfig:DataStorageConfig)
+    {
     }
+
+    public ngOnInit():void
+    {
+        this._currentUser = this._storageConfig.storage;
+    }
+
 }

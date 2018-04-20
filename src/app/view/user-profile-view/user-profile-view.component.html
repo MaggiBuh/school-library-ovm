@@ -1,0 +1,30 @@
+<div>
+    <terra-portlet>
+        <div class="container-fluid user-profile-container">
+            <div class="row user-profile">
+                <div class="user-image col-md-2">
+                    <img src="https://www.xing.com/assets/frontend_minified/img/users/nobody_m.1024x1024.jpg">
+                </div>
+                <div class="user-info col-md-10">
+                    <div class="user-name">
+                        <h2>{{_currentUser.userName}}</h2>
+                    </div>
+                    <div>Vorname: {{_currentUser.firstName}}</div>
+                    <div>Nachname: {{_currentUser.lastName}}</div>
+                    <div>Klasse: {{_currentUser.userClass}}</div>
+                    <div>E-mail: {{_currentUser.email}}</div>
+                    <div>
+                        <terra-button inputIcon="fas fa-cog"
+                                      (outputClicked)="{}">
+                        </terra-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="books">
+            <div *ngFor="let book of _currentUser.books">
+                {{book.book_id}}
+            </div>
+        </div>
+    </terra-portlet>
+</div>
