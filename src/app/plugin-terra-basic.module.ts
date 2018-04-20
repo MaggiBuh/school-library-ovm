@@ -17,6 +17,8 @@ import {
     Routes
 } from '@angular/router';
 import { PhpConnectionHelper } from './view/php-connection-helper/php-connection-helper';
+import { UserProfileViewComponent } from './view/user-profile-view/user-profile-view.component';
+import { DataStorageConfig } from './view/data/data-storage.config';
 
 const appRoutes:Routes = [
     {
@@ -24,8 +26,8 @@ const appRoutes:Routes = [
         component: UserRegisterViewComponent
     },
     {
-        path:      'login',
-        component: UserLoginViewComponent
+        path:      'profile',
+        component: UserProfileViewComponent
     },
     {
         path:      'home',
@@ -53,9 +55,11 @@ const appRoutes:Routes = [
         PluginTerraBasicComponent,
         BookListViewComponent,
         UserLoginViewComponent,
-        UserRegisterViewComponent
+        UserRegisterViewComponent,
+        UserProfileViewComponent
     ],
     providers:    [
+        DataStorageConfig,
         PhpConnectionHelper,
         LocalizationConfig,
         {
