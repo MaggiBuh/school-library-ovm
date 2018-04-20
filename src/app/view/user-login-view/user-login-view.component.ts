@@ -5,6 +5,8 @@ import {
 import { PhpConnectionHelper } from '../php-connection-helper/php-connection-helper';
 import { isNullOrUndefined } from 'util';
 import { TerraButtonInterface } from '@plentymarkets/terra-components';
+import { Router } from '@angular/router';
+import { DataStorageConfig } from '../data/data-storage.config';
 
 @Component({
     selector: 'user-login-view',
@@ -19,7 +21,9 @@ export class UserLoginViewComponent implements OnInit
     private _loggedIn:boolean = false;
     private _buttonOptionList:Array<TerraButtonInterface> = [];
 
-    public constructor(private _phpConnectionHelper:PhpConnectionHelper)
+    public constructor(private _phpConnectionHelper:PhpConnectionHelper,
+                       private _router:Router,
+                       private _storageConfig:DataStorageConfig)
     {
     }
 
@@ -27,17 +31,13 @@ export class UserLoginViewComponent implements OnInit
     {
         this._buttonOptionList.push({
             caption:       'Profile',
-            icon:          'icon-user_my_account',
-            clickFunction: ():void =>
-                           {
-                           }
+            icon:          'fas fa-user-circle',
+            clickFunction: ():void => this.openProfileViewWithCurrentUserData(this._currentUser)
         });
         this._buttonOptionList.push({
             caption:       'Logout',
-            icon:          'icon-user_my_account',
-            clickFunction: ():void =>
-                           {
-                           }
+            icon:          'fas fa-sign-out-alt',
+            clickFunction: ():void => this.logoutCurrentUser()
         });
     }
 
@@ -48,30 +48,28 @@ export class UserLoginViewComponent implements OnInit
         {
             this._phpConnectionHelper.loginWithExistingAccount(userName, password).subscribe((res) =>
             {
-                let userData = res.json();
-                if(userData['error'] !== true)
-                {
-                    this._loggedIn = true;
-                    this._currentUser = {
-                            userId:    userData['id'],
-                            userName:  userData['username'],
-                            firstName: userData['firstname'],
-                            lastName:  userData['lastname'],
-                            email:     userData['email'],
-                            userClass: userData['class'],
-                            userRole:  userData['role'],
-                        };
-                }
-                else
-                {
-                    console.log(userData['error_message']);
-                }
+                this._currentUser = res.json();
+                this._loggedIn = true;
             });
         }
         else
         {
             console.log('Felder müssen ausgefüllt sein!');
         }
+    }
+
+    private logoutCurrentUser():void
+    {
+        this._loggedIn = false;
+        this._storageConfig.storage = [];
+        this._currentUser = [];
+        this._router.navigateByUrl('/home');
+    }
+
+    private openProfileViewWithCurrentUserData(currentUser:Array<any>):void
+    {
+        this._storageConfig.storage = currentUser;
+        this._router.navigate(['/profile']);
     }
 
 }
