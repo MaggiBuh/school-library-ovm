@@ -13,19 +13,19 @@
         <div class="book-container" id="{{book.id +'_container'}}">
             <div class="book-info">
                 <div class="book-image">
-                    <img src={{book.imageUrl}}>
+                    <img src="{{book.imageUrl}}">
                 </div>
                 <div>
-                    <h1>{{book.title}}</h1>
+                    <h4>{{book.title}}</h4>
                     <div class="row book-info">
                         <div class="book-info-data col-md-2">
-                            <div>Author: {{book.author}}</div>
-                            <div>Verlag: {{book.publisher}}</div>
+                            <div>Author: {{book['author']}}</div>
+                            <div>Verlag: {{book['publisher']}}</div>
                         </div>
                         <div class="book-info-description col-md-6">
                             <div>
                                 <div>Beschreibung:</div>
-                                <div [innerHTML]="book.description"></div>
+                                <div [innerHTML]="book['description']"></div>
                             </div>
                         </div>
                     </div>
