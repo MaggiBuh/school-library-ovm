@@ -17,7 +17,7 @@ export class PhpConnectionHelper
 
     public loginWithExistingAccount(userName:string, password:string):Observable<any>
     {
-        let url:string = 'assets/php/login/login.php';
+        let url:string = 'assets/php/login/getExistingLoginUserByUsernameAndPassword.php';
         return this._http.post(
             url,
             {
