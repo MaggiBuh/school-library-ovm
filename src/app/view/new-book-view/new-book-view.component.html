@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <terra-portlet>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Add new book</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <terra-text-input inputName="booktitle">
+                            </terra-text-input>
+                            <terra-text-input inputName="isbn">
+                            </terra-text-input>
+                            <terra-text-input inputName="release-date">
+                            </terra-text-input>
+                            <terra-text-input inputName="image-url">
+                            </terra-text-input>
+                            <terra-text-input inputName="website">
+                            </terra-text-input>
+                            <terra-checkbox inputCaption="Disk?">
+                            </terra-checkbox>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-11">
+                                        <terra-suggestion-box [inputListBoxValues]="_publisherValues">
+                                        </terra-suggestion-box>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <terra-button inputIcon="fas fa-plus"
+                                                      [inputIsTertiary]="true">
+                                        </terra-button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-11">
+                                        <terra-suggestion-box [inputListBoxValues]="_authorValues">
+                                        </terra-suggestion-box>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <terra-button inputIcon="fas fa-plus"
+                                                      [inputIsTertiary]="true">
+                                        </terra-button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-11">
+                                        <terra-suggestion-box [inputListBoxValues]="_storageValues">
+                                        </terra-suggestion-box>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <terra-button inputIcon="fas fa-plus"
+                                                      [inputIsTertiary]="true">
+                                        </terra-button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="col-md-12">
+                            <div class="text-md-right">
+                                <terra-button inputCaption="Save new Book">
+                                </terra-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </terra-portlet>
+        </div>
+    </div>
+</div>
