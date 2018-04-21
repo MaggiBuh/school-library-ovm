@@ -19,6 +19,7 @@ import {
 import { PhpConnectionHelper } from './view/php-connection-helper/php-connection-helper';
 import { UserProfileViewComponent } from './view/user-profile-view/user-profile-view.component';
 import { DataStorageConfig } from './view/data/data-storage.config';
+import { NewBookViewComponent } from './view/new-book-view/new-book-view.component';
 
 const appRoutes:Routes = [
     {
@@ -32,6 +33,10 @@ const appRoutes:Routes = [
     {
         path:      'home',
         component: BookListViewComponent
+    },
+    {
+        path:      'new-book',
+        component: NewBookViewComponent
     },
     {
         path:       '',
@@ -56,7 +61,8 @@ const appRoutes:Routes = [
         BookListViewComponent,
         UserLoginViewComponent,
         UserRegisterViewComponent,
-        UserProfileViewComponent
+        UserProfileViewComponent,
+        NewBookViewComponent
     ],
     providers:    [
         DataStorageConfig,
