@@ -30,4 +30,37 @@ export class PhpConnectionHelper
         );
     }
 
+    public getAllAuthors():Observable<any>
+    {
+        let url:string = 'assets/php/author/allAuthors/getAllAuthors.php';
+        return this._http.get(
+            url,
+            {
+                headers: this._header
+            }
+        );
+    }
+
+    public getAllPublisher():Observable<any>
+    {
+        let url:string = 'assets/php/publisher/allPublisher/getAllPublisher.php';
+        return this._http.get(
+            url,
+            {
+                headers: this._header
+            }
+        );
+    }
+
+    public getAllStorages():Observable<any>
+    {
+        let url:string = 'assets/php/storage/allStorages/getAllStorages.php';
+        return this._http.get(
+            url,
+            {
+                headers: this._header
+            }
+        );
+    }
+
 }
