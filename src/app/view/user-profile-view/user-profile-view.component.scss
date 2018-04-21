@@ -6,18 +6,35 @@
         margin-bottom: 20px;
         .user-image
         {
+            text-align: center;
             img
             {
                 width: 150px;
-                border-radius: 100px;
+                border-radius: 100%;
                 border: 1px solid;
             }
         }
         .user-info
         {
+            display: flex;
             .user-name
             {
                 margin-bottom: 15px;
+            }
+            table
+            {
+                th
+                {
+                    width: 50%;
+                }
+            }
+            .profile-buttons
+            {
+                flex: auto;
+                .settings-button
+                {
+                    float: right;
+                }
             }
         }
     }

@@ -1,8 +1,15 @@
 import {
     Component,
-    OnInit
+    OnInit,
+    ViewChild
 } from '@angular/core';
 import { DataStorageConfig } from '../data/data-storage.config';
+import {
+    TerraAlertComponent,
+    TerraOverlayButtonInterface,
+    TerraOverlayComponent
+} from '@plentymarkets/terra-components';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'user-profile-view',
@@ -12,15 +19,49 @@ import { DataStorageConfig } from '../data/data-storage.config';
 export class UserProfileViewComponent implements OnInit
 {
 
-    private _currentUser:Array<any> = [];
+    @ViewChild('viewChildOverlayProfileSettings') public viewChildOverlayProfileSettings:TerraOverlayComponent;
 
-    public constructor(private _storageConfig:DataStorageConfig)
+    private _currentUser:Array<any> = [];
+    private _validateAndSaveProfileData:TerraOverlayButtonInterface;
+    private _alert:TerraAlertComponent = TerraAlertComponent.getInstance();
+
+    public constructor(private _storageConfig:DataStorageConfig,
+                       private _router:Router)
     {
     }
 
     public ngOnInit():void
     {
+        this._alert.closeAlertByIdentifier('alert');
+        this._validateAndSaveProfileData = {
+            icon:          'fas fa-plus',
+            caption:       'Save',
+            isDisabled:    false,
+            clickFunction: ():void => this.validateAndSaveProfileData(this.viewChildOverlayProfileSettings)
+        };
+
         this._currentUser = this._storageConfig.storage;
+    }
+
+    public openOverlay(overlay:TerraOverlayComponent):void
+    {
+        overlay.showOverlay();
+    }
+
+    public openNewBookView():void
+    {
+        this._router.navigate(['/new-book']);
+    }
+
+    private validateAndSaveProfileData(overlay:TerraOverlayComponent):void
+    {
+        this._alert.addAlert({
+            msg:              'Successfully saved!',
+            type:             'success',
+            dismissOnTimeout: 2000,
+            identifier:       'alert'
+        });
+        overlay.hideOverlay();
     }
 
 }
