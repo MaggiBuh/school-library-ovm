@@ -15,7 +15,7 @@ class GetBookUserRelationsByUserIdClass
                   ON b.book_id = ub.book_id 
                   INNER JOIN user AS u
                   ON ub.user_id = u.user_id 
-                  WHERE u.user_id = '$userId';";
+                  WHERE u.user_id = '$userId'";
 
         $res = $conn->query($query);
         $bookUserRelationData = [];
