@@ -41,9 +41,9 @@ export class PhpConnectionHelper
         );
     }
 
-    public getAllPublisher():Observable<any>
+    public getAllPublishers():Observable<any>
     {
-        let url:string = 'assets/php/publisher/allPublisher/getAllPublisher.php';
+        let url:string = 'assets/php/publisher/allPublisher/getAllPublishers.php';
         return this._http.get(
             url,
             {
