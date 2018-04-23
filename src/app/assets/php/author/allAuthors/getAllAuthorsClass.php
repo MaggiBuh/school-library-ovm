@@ -9,7 +9,7 @@ class GetAllAuthorsClass
         $this->_dbConn = new GetDatabaseConnectionClass();
         $conn = $this->_dbConn->getDBConnectionAndCheckIfFailed();
 
-        $query = "SELECT id, firstame, lastname FROM author";
+        $query = "SELECT id, firstname, lastname FROM author";
 
         $res = $conn->query($query);
         $authors = [];
