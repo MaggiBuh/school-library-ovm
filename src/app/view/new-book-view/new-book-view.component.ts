@@ -58,28 +58,16 @@ export class NewBookViewComponent implements OnInit
             (authors:any, publishers:any, storages:any) =>
             {
                 return {
-                    authors:   authors.json(),
+                    authors:    authors.json(),
                     publishers: publishers.json(),
-                    storages:  storages.json()
+                    storages:   storages.json()
                 };
             }
         ).subscribe((data:any) =>
         {
-            data.authors.forEach(author =>
-                {
-                    console.log(author);
-                }
-            );
-            data.publishers.forEach(publisher =>
-                {
-                    console.log(publisher);
-                }
-            );
-            data.storages.forEach(storage =>
-                {
-                    console.log(storage);
-                }
-            );
+            console.log(data.authors);
+            console.log(data.publishers);
+            console.log(data.storages);
         });
     }
 
