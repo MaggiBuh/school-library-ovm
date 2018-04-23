@@ -53,14 +53,14 @@ export class NewBookViewComponent implements OnInit
 
         Observable.combineLatest(
             this._phpConnectionHelper.getAllAuthors(),
-            this._phpConnectionHelper.getAllPublisher(),
+            this._phpConnectionHelper.getAllPublishers(),
             this._phpConnectionHelper.getAllStorages(),
-            (authors:any, publisher:any, storages:any) =>
+            (authors:any, publishers:any, storages:any) =>
             {
                 return {
                     authors:   authors.json(),
-                    publisher: publisher.json(),
-                    storages:  storages.json(),
+                    publishers: publishers.json(),
+                    storages:  storages.json()
                 };
             }
         ).subscribe((data:any) =>
@@ -70,7 +70,7 @@ export class NewBookViewComponent implements OnInit
                     console.log(author);
                 }
             );
-            data.publisher.forEach(publisher =>
+            data.publishers.forEach(publisher =>
                 {
                     console.log(publisher);
                 }
