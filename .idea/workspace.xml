@@ -2,39 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f45d721-bc15-45bf-aa80-16caf70147ba" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/GetAllBooks.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/GetAllBooksClass.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getAuthorByBookId/GetAuthorByBookIdClass.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getBookAmountByBookId/GetBookAmountByBookIdClass.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getGenreByBookId/GetGenreByBookIdClass.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getOwnerByBookOwnerId/GetOwnerByBookOwnerIdClass.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getPublisherByBookPublisherId/GetPublisherByBookPublisherIdClass.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getStorageByBookId/GetStorageByBookIdClass.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/view/book-data-service/book-data.service.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/view/data/authores.config.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/view/data/publisher.config.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/app/view/data/storages.config.ts" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/app/assets/data/books.json" afterPath="$PROJECT_DIR$/src/app/assets/data/books.json" />
-      <change beforePath="$PROJECT_DIR$/src/app/assets/php/author/allAuthors/getAllAuthorsClass.php" afterPath="$PROJECT_DIR$/src/app/assets/php/author/allAuthors/getAllAuthorsClass.php" />
-      <change beforePath="$PROJECT_DIR$/src/app/assets/php/login/getBookUserRelationsByUserIdClass.php" afterPath="$PROJECT_DIR$/src/app/assets/php/login/getBookUserRelationsByUserIdClass.php" />
-      <change beforePath="$PROJECT_DIR$/src/app/assets/php/login/getExistingLoginUserDataByUsernameAndPasswordClass.php" afterPath="$PROJECT_DIR$/src/app/assets/php/login/getExistingLoginUserDataByUsernameAndPasswordClass.php" />
-      <change beforePath="$PROJECT_DIR$/src/app/assets/php/publisher/allPublisher/getAllPublishersClass.php" afterPath="$PROJECT_DIR$/src/app/assets/php/publisher/allPublisher/getAllPublishersClass.php" />
-      <change beforePath="$PROJECT_DIR$/src/app/assets/php/storage/allStorages/getAllStoragesClass.php" afterPath="$PROJECT_DIR$/src/app/assets/php/storage/allStorages/getAllStoragesClass.php" />
-      <change beforePath="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" afterPath="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.html" afterPath="$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.html" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.scss" afterPath="$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.scss" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.ts" afterPath="$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.ts" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/book-profile-view/book-profile-view.component.html" afterPath="$PROJECT_DIR$/src/app/view/data/authores.config.ts" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/book-profile-view/book-profile-view.component.scss" afterPath="$PROJECT_DIR$/src/app/view/book-data-service/book-data.service.ts" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/book-profile-view/book-profile-view.component.ts" afterPath="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getBookAmountByBookId/GetBookAmountByBookIdClass.php" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html" afterPath="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts" afterPath="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/php-connection-helper/php-connection-helper.ts" afterPath="$PROJECT_DIR$/src/app/view/php-connection-helper/php-connection-helper.ts" />
       <change beforePath="$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.html" afterPath="$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.html" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.ts" afterPath="$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.ts" />
-      <change beforePath="$PROJECT_DIR$/src/app/view/user-profile-view/user-profile-view.component.html" afterPath="$PROJECT_DIR$/src/app/view/user-profile-view/user-profile-view.component.html" />
-      <change beforePath="$PROJECT_DIR$/src/index.glob.scss" afterPath="$PROJECT_DIR$/src/index.glob.scss" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/user-login-view/user-register-view/user-register-view.component.ts" afterPath="$PROJECT_DIR$/src/app/view/user-login-view/user-register-view/user-register-view.component.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,48 +15,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="book-list-view.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="book-list-view.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
+            <state relative-caret-position="268">
+              <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="book-list-view.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-371">
-              <caret line="28" column="68" lean-forward="false" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
-              <folding>
-                <element signature="e#0#73#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="book-data.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/view/book-data-service/book-data.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plugin-terra-basic.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#66#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -94,10 +28,42 @@
       <file leaf-file-name="GetAllBooksClass.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/GetAllBooksClass.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-270">
-              <caret line="5" column="80" lean-forward="false" selection-start-line="5" selection-start-column="80" selection-end-line="5" selection-end-column="80" />
+            <state relative-caret-position="353">
+              <caret line="40" column="57" lean-forward="false" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
               <folding>
                 <marker date="1524649001739" expanded="true" signature="837:855" ph="SELECT * FRO... book" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-login-view.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-register-view.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/view/user-login-view/user-register-view/user-register-view.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-register-view.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/view/user-login-view/user-register-view/user-register-view.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,8 +72,8 @@
       <file leaf-file-name="GetBookAmountByBookIdClass.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getBookAmountByBookId/GetBookAmountByBookIdClass.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+            <state relative-caret-position="53">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <marker date="1524649315391" expanded="true" signature="256:719" ph="SELECT au.* author" />
               </folding>
@@ -170,8 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/assets/php/publisher/allPublisher/getAllOrderNumbersByPublisherOrderRelationClass.php" />
-        <option value="$PROJECT_DIR$/src/app/assets/php/publisher/allPublisher/getAllOrderNumbersByPublisherIdClass.php" />
         <option value="$PROJECT_DIR$/src/app/assets/php/storage/allStorages/getAllStorages.php" />
         <option value="$PROJECT_DIR$/src/app/assets/php/publisher/allPublisher/getAllPublisherClass.php" />
         <option value="$PROJECT_DIR$/src/app/assets/php/publisher/allPublisher/getAllPublisher.php" />
@@ -214,13 +178,15 @@
         <option value="$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.scss" />
         <option value="$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.ts" />
         <option value="$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.html" />
         <option value="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getBookAmountByBookId/getBookAmountByBookIdClass.php" />
         <option value="$PROJECT_DIR$/src/app/view/book-data-service/book-data.service.ts" />
         <option value="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" />
         <option value="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/GetAllBooksClass.php" />
         <option value="$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getBookAmountByBookId/GetBookAmountByBookIdClass.php" />
         <option value="$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.html" />
+        <option value="$PROJECT_DIR$/src/app/view/user-login-view/user-register-view/user-register-view.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.html" />
+        <option value="$PROJECT_DIR$/src/app/view/user-login-view/user-register-view/user-register-view.component.ts" />
       </list>
     </option>
   </component>
@@ -297,6 +263,25 @@
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="author" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="school-libary-ovm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school-libary-ovm" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="author" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="allAuthors" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="school-libary-ovm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school-libary-ovm" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="books" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -337,12 +322,7 @@
               <item name="school-libary-ovm" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="books" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="get" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="allBooks" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="getStorageByBookId" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="school-libary-ovm" type="b2602c69:ProjectViewProjectNode" />
@@ -350,6 +330,16 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user-login-view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="school-libary-ovm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school-libary-ovm" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user-login-view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user-register-view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -481,15 +471,16 @@
       <workItem from="1524473642811" duration="23827000" />
       <workItem from="1524570920498" duration="1000000" />
       <workItem from="1524571972765" duration="7169000" />
-      <workItem from="1524646134185" duration="3469000" />
+      <workItem from="1524646134185" duration="5505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140782000" />
+    <option name="totallyTimeSpent" value="142818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1400" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23418574" sideWeight="0.505891" order="7" side_tool="true" content_ui="tabs" />
@@ -498,7 +489,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23418574" sideWeight="0.49410897" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24005891" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24005891" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -579,7 +570,7 @@
         <state relative-caret-position="150">
           <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
           <folding>
-            <element signature="e#0#73#0" expanded="true" />
+            <element signature="e#0#73#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -607,14 +598,6 @@
           <folding>
             <element signature="e#0#58#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,16 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/book-data-service/book-data.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vendor.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -688,22 +661,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/view/book-profile-view/book-profile-view.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/GetAllBooksClass.php">
+    <entry file="file://$PROJECT_DIR$/src/app/assets/php/author/allAuthors/getAllAuthorsClass.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="5" column="80" lean-forward="false" selection-start-line="5" selection-start-column="80" selection-end-line="5" selection-end-column="80" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1524649001739" expanded="true" signature="837:855" ph="SELECT * FRO... book" />
+            <marker date="1524487931406" expanded="true" signature="237:257" ph="SELECT * FRO... author" />
           </folding>
         </state>
       </provider>
@@ -713,15 +684,45 @@
         <state relative-caret-position="-371">
           <caret line="28" column="68" lean-forward="false" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
           <folding>
-            <element signature="e#0#73#0" expanded="true" />
+            <element signature="e#0#73#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/book-data-service/book-data.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#66#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/GetAllBooksClass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="40" column="57" lean-forward="false" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+          <folding>
+            <marker date="1524649001739" expanded="true" signature="837:855" ph="SELECT * FRO... book" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/assets/php/books/get/allBooks/getBookAmountByBookId/GetBookAmountByBookIdClass.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        <state relative-caret-position="53">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <marker date="1524649315391" expanded="true" signature="256:719" ph="SELECT au.* author" />
           </folding>
@@ -730,17 +731,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
+        <state relative-caret-position="268">
+          <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/book-profile-view/book-profile-view.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/view/user-login-view/user-register-view/user-register-view.component.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/user-login-view/user-register-view/user-register-view.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

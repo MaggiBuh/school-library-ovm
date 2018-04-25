@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {
+    Component,
+    OnInit
+} from '@angular/core';
 import { Http } from '@angular/http';
 import { Router } from '@angular/router';
 
@@ -7,7 +10,7 @@ import { Router } from '@angular/router';
     template: require('./user-register-view.component.html'),
     styles:   [require('./user-register-view.component.scss')],
 })
-export class UserRegisterViewComponent
+export class UserRegisterViewComponent implements OnInit
 {
 
     private _header:any = new Headers();
@@ -17,6 +20,10 @@ export class UserRegisterViewComponent
                        private _router:Router)
     {
 
+    }
+
+    public ngOnInit():void
+    {
     }
 
     public validateAndSave(userData:Array<any>):void
@@ -34,8 +41,7 @@ export class UserRegisterViewComponent
                 password:  userData['password'],
             },
             {headers: this._header}
-        ).subscribe(() =>
-        {
+        ).subscribe(() => {
             this._router.navigateByUrl('/home');
         });
     }
