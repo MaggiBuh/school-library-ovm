@@ -50,25 +50,6 @@ export class NewBookViewComponent implements OnInit
                 caption: ''
             }
         );
-
-        Observable.combineLatest(
-            this._phpConnectionHelper.getAllAuthors(),
-            this._phpConnectionHelper.getAllPublishers(),
-            this._phpConnectionHelper.getAllStorages(),
-            (authors:any, publishers:any, storages:any) =>
-            {
-                return {
-                    authors:    authors.json(),
-                    publishers: publishers.json(),
-                    storages:   storages.json()
-                };
-            }
-        ).subscribe((data:any) =>
-        {
-            console.log(data.authors);
-            console.log(data.publishers);
-            console.log(data.storages);
-        });
     }
 
 }

@@ -27,7 +27,9 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-11">
-                                        <terra-suggestion-box [inputListBoxValues]="_publisherValues">
+                                        <terra-suggestion-box inputName="choose publisher"
+                                                              [inputListBoxValues]="_publisherValues"
+                                                              inputIsRequired="true">
                                         </terra-suggestion-box>
                                     </div>
                                     <div class="col-md-1">
@@ -38,7 +40,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-11">
-                                        <terra-suggestion-box [inputListBoxValues]="_authorValues">
+                                        <terra-suggestion-box inputName="choose authors"
+                                                              [inputListBoxValues]="_authorValues"
+                                                              inputIsRequired="true">
                                         </terra-suggestion-box>
                                     </div>
                                     <div class="col-md-1">
@@ -49,7 +53,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-11">
-                                        <terra-suggestion-box [inputListBoxValues]="_storageValues">
+                                        <terra-suggestion-box inputName="choose storage"
+                                                              [inputListBoxValues]="_storageValues"
+                                                              inputIsRequired="true">
                                         </terra-suggestion-box>
                                     </div>
                                     <div class="col-md-1">
@@ -61,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="row">
                         <div class="col-md-12">
                             <div class="text-md-right">
                                 <terra-button inputCaption="Save new Book">
