@@ -32,7 +32,6 @@ class getExistingLoginUserDataByUsernameAndPasswordClass
             }
             $currentUserData['books'] = $bookUserRelation->getCurrentUserDataByUserId($currentUserData['user_id']);
             if (count($currentUserData) > 0) {
-                $currentUserData['error'] = false;
                 echo json_encode($currentUserData);
             } else {
                 echo json_encode(

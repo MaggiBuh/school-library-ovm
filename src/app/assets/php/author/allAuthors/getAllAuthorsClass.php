@@ -9,7 +9,7 @@ class GetAllAuthorsClass
         $this->_dbConn = new GetDatabaseConnectionClass();
         $conn = $this->_dbConn->getDBConnectionAndCheckIfFailed();
 
-        $query = "SELECT id, firstname, lastname FROM author";
+        $query = "SELECT * FROM author";
 
         $res = $conn->query($query);
         $authors = [];
@@ -21,7 +21,6 @@ class GetAllAuthorsClass
                 array_push($authors, $row);
             }
             if (count($authors) > 0) {
-                $authors['error'] = false;
                 echo json_encode($authors);
             } else {
                 echo json_encode(

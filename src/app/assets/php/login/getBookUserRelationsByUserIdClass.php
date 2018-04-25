@@ -11,7 +11,7 @@ class GetBookUserRelationsByUserIdClass
 
         $query = "SELECT b.book_id, book_name, isbn, release_date, disk, imageurl, owner_id, publisher_id, website
                   FROM book AS b
-                  INNER JOIN user_book_relation AS ub
+                  INNER JOIN user_book_storage_relation AS ub
                   ON b.book_id = ub.book_id 
                   INNER JOIN user AS u
                   ON ub.user_id = u.user_id 

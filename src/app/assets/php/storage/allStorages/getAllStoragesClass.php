@@ -9,7 +9,7 @@ class GetAllStoragesClass
         $this->_dbConn = new GetDatabaseConnectionClass();
         $conn = $this->_dbConn->getDBConnectionAndCheckIfFailed();
 
-        $query = "SELECT id, name, type FROM storage";
+        $query = "SELECT * FROM storage";
 
         $res = $conn->query($query);
         $storages = [];
@@ -21,7 +21,6 @@ class GetAllStoragesClass
                 array_push($storages, $row);
             }
             if (count($storages) > 0) {
-                $storages['error'] = false;
                 echo json_encode($storages);
             } else {
                 echo json_encode(

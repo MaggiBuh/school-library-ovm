@@ -9,7 +9,9 @@ class GetAllPublishersClass
         $this->_dbConn = new GetDatabaseConnectionClass();
         $conn = $this->_dbConn->getDBConnectionAndCheckIfFailed();
 
-        $query = "SELECT p.id AS publisher_id, p.name, pon.number 
+        $query = "SELECT p.id AS publisher_id, p.name, p.website, 
+                         p.email, p.phonenumber, p.ordernumber_id, 
+                         pon.number
                   FROM publisher AS p
                   INNER JOIN publisher_order_number AS pon
                   ON p.ordernumber_id = pon.id";
@@ -24,7 +26,6 @@ class GetAllPublishersClass
                 array_push($publish, $row);
             }
             if (count($publish) > 0) {
-                $publish['error'] = false;
                 echo json_encode($publish);
             } else {
                 echo json_encode(
