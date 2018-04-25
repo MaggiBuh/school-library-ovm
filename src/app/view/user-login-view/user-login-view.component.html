@@ -4,7 +4,7 @@
             <a routerLink="/home" routerLinkActive="active"><h1>School Library</h1></a>
         </div>
         <div class="col-md-5 text-md-right">
-            <div *ngIf="_loggedIn" class="profile vcenter">
+            <div *ngIf="loggedIn" class="profile vcenter">
                 <div class="username">{{_currentUser.userName}}</div>
                 <terra-button-with-options ngClass="profile-button"
                                            inputIcon="fas fa-bars"
@@ -12,7 +12,7 @@
                                            [inputOptions]="_buttonOptionList">
                 </terra-button-with-options>
             </div>
-            <div *ngIf="!_loggedIn">
+            <div *ngIf="!loggedIn">
                 <terra-portlet>
                     <div class="container-fluid">
                         <div class="row login-form">

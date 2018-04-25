@@ -18,7 +18,7 @@ export class UserLoginViewComponent implements OnInit
     private _userName:string;
     private _password:string;
     private _currentUser:any;
-    private _loggedIn:boolean = false;
+    public loggedIn:boolean = false;
     private _buttonOptionList:Array<TerraButtonInterface> = [];
 
     public constructor(private _phpConnectionHelper:PhpConnectionHelper,
@@ -35,6 +35,11 @@ export class UserLoginViewComponent implements OnInit
             clickFunction: ():void => this.openProfileViewWithCurrentUserData(this._currentUser)
         });
         this._buttonOptionList.push({
+            caption:       'New Book',
+            icon:          'fas fa-plus-circle',
+            clickFunction: ():void => this.openNewBookView()
+        });
+        this._buttonOptionList.push({
             caption:       'Logout',
             icon:          'fas fa-sign-out-alt',
             clickFunction: ():void => this.logoutCurrentUser()
@@ -46,10 +51,9 @@ export class UserLoginViewComponent implements OnInit
         if(!isNullOrUndefined(userName) && userName !== '' &&
            !isNullOrUndefined(password) && password !== '')
         {
-            this._phpConnectionHelper.loginWithExistingAccount(userName, password).subscribe((res) =>
-            {
+            this._phpConnectionHelper.loginWithExistingAccount(userName, password).subscribe((res) => {
                 this._currentUser = res.json();
-                this._loggedIn = true;
+                this.loggedIn = true;
             });
         }
         else
@@ -60,7 +64,7 @@ export class UserLoginViewComponent implements OnInit
 
     private logoutCurrentUser():void
     {
-        this._loggedIn = false;
+        this.loggedIn = false;
         this._storageConfig.storage = [];
         this._currentUser = [];
         this._router.navigateByUrl('/home');
@@ -70,6 +74,11 @@ export class UserLoginViewComponent implements OnInit
     {
         this._storageConfig.storage = currentUser;
         this._router.navigate(['/profile']);
+    }
+
+    public openNewBookView():void
+    {
+        this._router.navigate(['/new-book']);
     }
 
 }
