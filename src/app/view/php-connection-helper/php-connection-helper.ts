@@ -63,4 +63,14 @@ export class PhpConnectionHelper
         );
     }
 
+    public getAllBooks():Observable<any>
+    {
+        let url:string = 'assets/php/books/get/allBooks/GetAllBooks.php';
+        return this._http.get(
+            url,
+            {
+                headers: this._header
+            }
+        );
+    }
 }
