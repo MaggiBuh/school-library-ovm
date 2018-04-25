@@ -20,6 +20,7 @@ import { PhpConnectionHelper } from './view/php-connection-helper/php-connection
 import { UserProfileViewComponent } from './view/user-profile-view/user-profile-view.component';
 import { DataStorageConfig } from './view/data/data-storage.config';
 import { NewBookViewComponent } from './view/new-book-view/new-book-view.component';
+import { BookDataService } from './view/book-data-service/book-data.service';
 
 const appRoutes:Routes = [
     {
@@ -65,6 +66,7 @@ const appRoutes:Routes = [
         NewBookViewComponent
     ],
     providers:    [
+        BookDataService,
         DataStorageConfig,
         PhpConnectionHelper,
         LocalizationConfig,
