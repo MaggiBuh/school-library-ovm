@@ -1,10 +1,11 @@
 import {
     Component,
-    OnInit
+    OnInit,
+    ViewChild
 } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Http } from '@angular/http';
 import { isNullOrUndefined } from 'util';
+import { PhpConnectionHelper } from '../php-connection-helper/php-connection-helper';
+import { TerraOverlayComponent } from '@plentymarkets/terra-components';
 
 @Component({
     selector: 'book-list-view',
@@ -13,18 +14,19 @@ import { isNullOrUndefined } from 'util';
 })
 export class BookListViewComponent implements OnInit
 {
-
+    @ViewChild('bookDetailOverlay') public bookDetailOverlay:TerraOverlayComponent;
     private _books:Array<any> = [];
+    private _currentBook:Array<any> = [];
     private _searchValue:string;
 
-    public constructor(private _http:Http)
+
+    public constructor(private _phpConnectionHelper:PhpConnectionHelper)
     {
     }
 
     public ngOnInit():void
     {
-        this.getAllBooks().subscribe((res:any) =>
-        {
+        this._phpConnectionHelper.getAllBooks().subscribe((res:any) => {
             this._books = res.json();
             this.checkIfBookDescriptionHasLengthLimit();
         });
@@ -37,20 +39,19 @@ export class BookListViewComponent implements OnInit
 
         if(!isNullOrUndefined(searchValue) && searchValue !== '')
         {
-            this._books.forEach(book =>
-            {
-                let bookTitle:string = book.title.toLowerCase();
+            this._books.forEach(book => {
+                let bookTitle:string = book.BookName.toLowerCase();
                 bookTitle = bookTitle.replace(/\s/g, '');
-                if(!isNullOrUndefined(book.title) && book.title !== '')
+                if(!isNullOrUndefined(book.BookName) && book.BookName !== '')
                 {
                     if(bookTitle.includes(searchValue))
                     {
-                        let bookContainer:any = document.getElementById(book.id + '_container');
+                        let bookContainer:any = document.getElementById(book.bookId + '_container');
                         bookContainer.style.display = 'block';
                     }
                     else
                     {
-                        let bookContainer:any = document.getElementById(book.id + '_container');
+                        let bookContainer:any = document.getElementById(book.bookId + '_container');
                         bookContainer.style.display = 'none';
                     }
                 }
@@ -61,41 +62,45 @@ export class BookListViewComponent implements OnInit
         {
             if(searchValue === '')
             {
-                this._books.forEach(book =>
-                {
-                    let bookContainer:any = document.getElementById(book.id + '_container');
+                this._books.forEach(book => {
+                    let bookContainer:any = document.getElementById(book.bookId + '_container');
                     bookContainer.style.display = 'block';
                 });
             }
         }
     }
 
-    private getAllBooks():Observable<any>
-    {
-        let url:string = 'assets/data/books.json';
-
-        return this._http.get(url);
-    }
-
     private checkIfBookDescriptionHasLengthLimit():void
     {
-        this._books.forEach(book =>
-        {
-            if(book.description.length > 400)
+        this._books.forEach(book => {
+            if(book.bookDescription.length > 400)
             {
-                book.description = book.description.substring(0, 400);
-                let lastIndex:number = book.description.lastIndexOf(' ');
-                book.description = book.description.substring(0, lastIndex);
-                book.description += '... <i class="more">[Mehr]</i>'
+                let shortBookDescription:string = book.bookDescription.substring(0, 400);
+                let lastIndex:number = shortBookDescription.lastIndexOf(' ');
+                shortBookDescription = shortBookDescription.substring(0, lastIndex);
+                shortBookDescription += '... <i class="more">[Mehr]</i>';
+                book['shortBookDescription'] = shortBookDescription;
             }
             else
             {
-                if(book.description === '')
+                if(book.bookDescription === '')
                 {
-                    book.description = 'Keine Beschreibung.';
+                    book.bookDescription = 'Keine Beschreibung.';
                 }
+                book['shortBookDescription'] = book.bookDescription;
             }
         });
+    }
+
+    public openBookDetailsOverlay(book:Array<any>):void
+    {
+        this.setCurrentBook(book);
+        this.bookDetailOverlay.showOverlay();
+    }
+
+    private setCurrentBook(book:Array<any>):void
+    {
+        this._currentBook = book;
     }
 
 }

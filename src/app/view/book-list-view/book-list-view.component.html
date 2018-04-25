@@ -8,24 +8,91 @@
         </div>
     </div>
 </terra-portlet>
-<div class="books-wrapper">
-    <div class="books-container" *ngFor="let book of _books">
-        <div class="book-container" id="{{book.id +'_container'}}">
-            <div class="book-info">
-                <div class="book-image">
+<div *ngFor="let book of _books" id="{{book.bookId + '_container'}}">
+    <terra-portlet>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1 book-image">
                     <img src="{{book.imageUrl}}">
                 </div>
-                <div>
-                    <h4>{{book.title}}</h4>
-                    <div class="row book-info">
-                        <div class="book-info-data col-md-2">
-                            <div>Author: {{book['author']}}</div>
-                            <div>Verlag: {{book['publisher']}}</div>
+                <div class="col-md-11">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 noPadding">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <h4>{{book.BookName}}</h4>
+                                        </div>
+                                        <div class="col-md-2 noPadding">
+                                            <div class="text-md-right">
+                                                <terra-button inputCaption="Book Details"
+                                                              (outputClicked)="openBookDetailsOverlay(book)">
+                                                </terra-button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="book-info-description col-md-6">
-                            <div>
-                                <div>Beschreibung:</div>
-                                <div [innerHTML]="book['description']"></div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div><strong>Author:</strong>
+                                    <ng-container *ngFor="let author of book.author">{{author.firstname + ' ' + author.lastname}}<br/>
+                                    </ng-container>
+                                </div>
+                                <div><strong>Verlag:</strong>
+                                    <ng-container *ngFor="let publisher of book.publisher">{{publisher.name}}</ng-container>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div><strong>Beschreibung:</strong></div>
+                                <div [innerHTML]="book.shortBookDescription">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </terra-portlet>
+</div>
+<terra-overlay #bookDetailOverlay
+               inputOverlayTitle="Detail View"
+               [inputIsLarge]="true">
+    <div class="overlay-book-details">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 book-image">
+                    <img src="{{_currentBook.imageUrl}}">
+                </div>
+                <div class="col-md-10">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 noPadding">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h2>{{_currentBook.BookName}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div><strong>Author:</strong>
+                                    <ng-container
+                                        *ngFor="let author of _currentBook.author">{{author.firstname + ' ' + author.lastname}}<br/>
+                                    </ng-container>
+                                </div>
+                                <div><strong>Verlag:</strong>
+                                    <ng-container *ngFor="let publisher of _currentBook.publisher">{{publisher.name}}</ng-container>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div><strong>Beschreibung:</strong></div>
+                                <div>{{_currentBook.bookDescription}}</div>
                             </div>
                         </div>
                     </div>
@@ -33,4 +100,9 @@
             </div>
         </div>
     </div>
-</div>
+    <div *ngFor="let stock of _currentBook.storage">
+        <div>{{stock.name + ' - ' + stock.type}}:
+            <div>{{stock.current_amount + '/' + stock.amount}}</div>
+        </div>
+    </div>
+</terra-overlay>
