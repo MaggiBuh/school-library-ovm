@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 @Component({
     selector: 'user-register-view',
     template: require('./user-register-view.component.html'),
-    styles:   [require('./user-register-view.component.scss')],
+    styles:   [require('./user-register-view.component.scss'),
+               require('./user-register.glob.scss').toString()],
 })
 export class UserRegisterViewComponent implements OnInit
 {
