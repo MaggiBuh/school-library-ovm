@@ -1,14 +1,12 @@
-import {
-    APP_INITIALIZER,
-    NgModule
-} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PluginTerraBasicComponent } from './plugin-terra-basic.component';
 import { TerraComponentsModule } from '@plentymarkets/terra-components/app/terra-components.module';
-import { HttpModule } from '@angular/http';
-import { TranslationModule } from 'angular-l10n';
+import {
+    L10nLoader,
+    TranslationModule
+} from 'angular-l10n';
 import { FormsModule } from '@angular/forms';
-import { LocalizationConfig } from './core/localization/terra-localization.config';
 import { BookListViewComponent } from './view/book-list-view/book-list-view.component';
 import { UserLoginViewComponent } from './view/user-login-view/user-login-view.component';
 import { UserRegisterViewComponent } from './view/user-login-view/user-register-view/user-register-view.component';
@@ -25,6 +23,8 @@ import { AuthorsConfig } from './view/data/authores.config';
 import { PublisherConfig } from './view/data/publisher.config';
 import { StoragesConfig } from './view/data/storages.config';
 import { GenreConfig } from './view/data/genre.config';
+import { HttpClientModule } from '@angular/common/http';
+import { l10nConfig } from './core/localization/l10n.config';
 
 const appRoutes:Routes = [
     {
@@ -53,9 +53,9 @@ const appRoutes:Routes = [
 @NgModule({
     imports:      [
         BrowserModule,
-        HttpModule,
         FormsModule,
-        TranslationModule.forRoot(),
+        HttpClientModule,
+        TranslationModule.forRoot(l10nConfig),
         TerraComponentsModule.forRoot(),
         RouterModule.forRoot(
             appRoutes
@@ -77,13 +77,6 @@ const appRoutes:Routes = [
         StoragesConfig,
         DataStorageConfig,
         PhpConnectionHelper,
-        LocalizationConfig,
-        {
-            provide:    APP_INITIALIZER,
-            useFactory: initLocalization,
-            deps:       [LocalizationConfig],
-            multi:      true
-        }
     ],
     bootstrap:    [
         PluginTerraBasicComponent
@@ -91,9 +84,8 @@ const appRoutes:Routes = [
 })
 export class PluginTerraBasicModule
 {
-}
-
-export function initLocalization(localizationConfig:LocalizationConfig):Function
-{
-    return () => localizationConfig.load();
+    constructor(public l10nLoader:L10nLoader)
+    {
+        this.l10nLoader.load();
+    }
 }
