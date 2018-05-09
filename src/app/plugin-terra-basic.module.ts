@@ -21,6 +21,9 @@ import { UserProfileViewComponent } from './view/user-profile-view/user-profile-
 import { DataStorageConfig } from './view/data/data-storage.config';
 import { NewBookViewComponent } from './view/new-book-view/new-book-view.component';
 import { BookDataService } from './view/book-data-service/book-data.service';
+import { AuthorsConfig } from './view/data/authores.config';
+import { PublisherConfig } from './view/data/publisher.config';
+import { StoragesConfig } from './view/data/storages.config';
 
 const appRoutes:Routes = [
     {
@@ -67,6 +70,9 @@ const appRoutes:Routes = [
     ],
     providers:    [
         BookDataService,
+        AuthorsConfig,
+        PublisherConfig,
+        StoragesConfig,
         DataStorageConfig,
         PhpConnectionHelper,
         LocalizationConfig,
