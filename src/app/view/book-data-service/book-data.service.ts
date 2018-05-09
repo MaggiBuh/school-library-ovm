@@ -13,6 +13,9 @@ export class BookDataService
                        private _publisherConfig:PublisherConfig,
                        private _storagesConfig:StoragesConfig)
     {
+        //_authorsConfig.authores = [];
+        //_publisherConfig.publishers = [];
+        //_storagesConfig.storages = [];
     }
 
     public setBookData()
