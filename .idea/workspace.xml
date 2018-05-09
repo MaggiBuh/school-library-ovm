@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f45d721-bc15-45bf-aa80-16caf70147ba" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" afterPath="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html" afterPath="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.scss" afterPath="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.scss" />
+      <change beforePath="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts" afterPath="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts" />
+      <change beforePath="$PROJECT_DIR$/src/index.glob.scss" afterPath="$PROJECT_DIR$/src/index.glob.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,13 +16,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="plugin-terra-basic.module.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts">
+      <file leaf-file-name="new-book-view.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+            <state relative-caret-position="216">
+              <caret line="90" column="36" lean-forward="true" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new-book-view.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new-book-view.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,6 +71,7 @@
       <find>foreac</find>
       <find>foreach</find>
       <find>plenty</find>
+      <find>local</find>
     </findStrings>
     <replaceStrings>
       <replace>register</replace>
@@ -106,11 +129,11 @@
         <option value="$PROJECT_DIR$/src/app/assets/php/genre/get/getAllGenre.php" />
         <option value="$PROJECT_DIR$/src/app/view/php-connection-helper/php-connection-helper.ts" />
         <option value="$PROJECT_DIR$/src/app/view/book-data-service/book-data.service.ts" />
-        <option value="$PROJECT_DIR$/src/index.glob.scss" />
-        <option value="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.scss" />
-        <option value="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html" />
         <option value="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" />
+        <option value="$PROJECT_DIR$/src/index.glob.scss" />
+        <option value="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html" />
       </list>
     </option>
   </component>
@@ -165,6 +188,21 @@
               <item name="school-library-ovm" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="school-library-ovm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school-library-ovm" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="school-library-ovm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school-library-ovm" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="new-book-view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -302,10 +340,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163622000" />
+    <option name="totallyTimeSpent" value="165000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="23" width="1398" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23418574" sideWeight="0.505891" order="7" side_tool="true" content_ui="tabs" />
@@ -314,7 +353,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23418574" sideWeight="0.49410897" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24705015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24705015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -406,7 +445,6 @@
     <entry file="file://$PROJECT_DIR$/src/app/view/user-login-view/user-register-view/user-register.glob.scss" />
     <entry file="file://$PROJECT_DIR$/src/app/view/user-login-view/user-register-view/user-register-view.component.html" />
     <entry file="file://$PROJECT_DIR$/src/app/view/edit-books-view/edit-books-view.component.scss" />
-    <entry file="file://$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.html" />
     <entry file="file://$PROJECT_DIR$/src/app/view/user-login-view/user-login-view.component.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/plugin-terra-basic.component.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -419,6 +457,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -488,17 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts" />
-    <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.scss" />
-    <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html" />
-    <entry file="file://$PROJECT_DIR$/src/index.glob.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="1" lean-forward="false" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -523,13 +551,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.glob.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
-          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/book-list-view/book-list-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1113">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="90" column="36" lean-forward="true" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
