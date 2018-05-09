@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f45d721-bc15-45bf-aa80-16caf70147ba" name="Default" comment="" />
+    <list default="true" id="6f45d721-bc15-45bf-aa80-16caf70147ba" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" afterPath="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,42 +14,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.glob.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/index.glob.scss">
+      <file leaf-file-name="plugin-terra-basic.module.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".bootstraprc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.bootstraprc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="347">
+              <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,6 +48,7 @@
       <find>fo</find>
       <find>foreac</find>
       <find>foreach</find>
+      <find>plenty</find>
     </findStrings>
     <replaceStrings>
       <replace>register</replace>
@@ -130,11 +106,11 @@
         <option value="$PROJECT_DIR$/src/app/assets/php/genre/get/getAllGenre.php" />
         <option value="$PROJECT_DIR$/src/app/view/php-connection-helper/php-connection-helper.ts" />
         <option value="$PROJECT_DIR$/src/app/view/book-data-service/book-data.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" />
         <option value="$PROJECT_DIR$/src/index.glob.scss" />
         <option value="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts" />
         <option value="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.scss" />
         <option value="$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html" />
+        <option value="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" />
       </list>
     </option>
   </component>
@@ -145,6 +121,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -180,6 +159,12 @@
               <item name="school-library-ovm" type="b2602c69:ProjectViewProjectNode" />
               <item name="school-library-ovm" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="school-library-ovm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school-library-ovm" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -317,7 +302,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162895000" />
+    <option name="totallyTimeSpent" value="163622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="23" width="1398" height="877" extended-state="0" />
@@ -451,6 +436,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -468,18 +454,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.bootstraprc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/plugin-terra-basic.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#58#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -495,24 +476,6 @@
     <entry file="file://$PROJECT_DIR$/src/app/assets/php/genre/get/getAllGenreClass.php" />
     <entry file="file://$PROJECT_DIR$/src/app/assets/php/genre/get/getAllGenre.php" />
     <entry file="file://$PROJECT_DIR$/src/app/view/book-data-service/book-data.service.ts" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="72" column="24" lean-forward="false" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#66#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/view/data/genre.config.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/view/edit-books-view/edit-books-view.component.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/view/edit-books-view/edit-books-view.component.html" />
@@ -528,6 +491,22 @@
     <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.scss" />
     <entry file="file://$PROJECT_DIR$/src/app/view/new-book-view/new-book-view.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/index.glob.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="1" lean-forward="false" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -536,11 +515,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.glob.scss">
+    <entry file="file://$PROJECT_DIR$/.bootstraprc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
