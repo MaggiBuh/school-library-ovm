@@ -6,5 +6,68 @@
 body
 {
     background-color: white !important;
-    overflow-y: hidden;
+    padding: 15px !important;
+}
+
+body::-webkit-scrollbar
+{
+    width: 0 !important
+}
+
+.profile-alert
+{
+    top: 10px !important;
+}
+
+.search-portlet
+{
+    .portlet
+    {
+        margin-bottom: 20px !important;
+    }
+}
+
+.login-form
+{
+    .btn-handler
+    {
+        width: 100% !important;
+    }
+}
+
+.more
+{
+    color: #9E9E9E !important;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.genre-portlet
+{
+    .portlet_body
+    {
+        padding: 0 !important;
+    }
+    //.genre-checkbox
+    //{
+    //    width: 100% !important;
+    //    height: 100% !important;
+    //    align-items: center !important;
+    //    div
+    //    {
+    //        width: 100% !important;
+    //        height: 100% !important;
+    //    }
+    //    .input-control
+    //    {
+    //        margin: 0 !important;
+    //        display: block !important;
+    //        width: 100% !important;
+    //        height: 100% !important;
+    //    }
+    //}
 }

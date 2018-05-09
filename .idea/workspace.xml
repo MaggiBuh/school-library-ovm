@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f45d721-bc15-45bf-aa80-16caf70147ba" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app/plugin-terra-basic.component.html" afterPath="$PROJECT_DIR$/src/app/plugin-terra-basic.component.html" />
-      <change beforePath="$PROJECT_DIR$/src/app/plugin-terra-basic.component.scss" afterPath="$PROJECT_DIR$/src/app/plugin-terra-basic.component.scss" />
-      <change beforePath="$PROJECT_DIR$/src/app/plugin-terra-basic.component.ts" afterPath="$PROJECT_DIR$/src/app/plugin-terra-basic.component.ts" />
-      <change beforePath="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" afterPath="$PROJECT_DIR$/src/app/plugin-terra-basic.module.ts" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/start/start.component.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/start/start.component.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/start/start.component.ts" afterPath="" />
-    </list>
+    <list default="true" id="6f45d721-bc15-45bf-aa80-16caf70147ba" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -325,7 +317,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162796000" />
+    <option name="totallyTimeSpent" value="162895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="23" width="1398" height="877" extended-state="0" />
