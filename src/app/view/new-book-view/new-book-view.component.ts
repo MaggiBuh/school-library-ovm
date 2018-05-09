@@ -16,16 +16,17 @@ import { GenreConfig } from '../data/genre.config';
 export class NewBookViewComponent implements OnInit
 {
 
-    private _authorValues:Array<TerraSuggestionBoxValueInterface> = [];
-    private _publisherValues:Array<TerraSuggestionBoxValueInterface> = [];
-    private _storageValues:Array<TerraSuggestionBoxValueInterface> = [];
-    private _genreValues:Array<object> = [];
-    private _selectedGenre:Array<object> = [];
+    public authorValues:Array<TerraSuggestionBoxValueInterface> = [];
+    public publisherValues:Array<TerraSuggestionBoxValueInterface> = [];
+    public storageValues:Array<TerraSuggestionBoxValueInterface> = [];
+    public ownerValues:Array<TerraSuggestionBoxValueInterface> = [];
+    public genreValues:Array<object> = [];
+    public selectedGenre:Array<object> = [];
 
     public constructor(private _authorsConfig:AuthorsConfig,
                        private _storagesConfig:StoragesConfig,
                        private _publisherConfig:PublisherConfig,
-                       private _genreConfig:GenreConfig,)
+                       private _genreConfig:GenreConfig)
     {
     }
 
@@ -36,21 +37,28 @@ export class NewBookViewComponent implements OnInit
 
     private initSuggestionBoxes():void
     {
-        this._authorValues.push
+        this.authorValues.push
         (
             {
                 value:   '',
                 caption: ''
             }
         );
-        this._publisherValues.push
+        this.publisherValues.push
         (
             {
                 value:   '',
                 caption: ''
             }
         );
-        this._storageValues.push
+        this.storageValues.push
+        (
+            {
+                value:   '',
+                caption: ''
+            }
+        );
+        this.ownerValues.push
         (
             {
                 value:   '',
@@ -59,7 +67,7 @@ export class NewBookViewComponent implements OnInit
         );
 
         this._authorsConfig.authores.forEach(((res:any) => {
-            this._authorValues.push
+            this.authorValues.push
             (
                 {
                     value:   res.authorId,
@@ -69,7 +77,7 @@ export class NewBookViewComponent implements OnInit
         }));
 
         this._storagesConfig.storages.forEach(((res:any) => {
-            this._storageValues.push
+            this.storageValues.push
             (
                 {
                     value:   res.storageId,
@@ -79,7 +87,7 @@ export class NewBookViewComponent implements OnInit
         }));
 
         this._publisherConfig.publishers.forEach(((res:any) => {
-            this._publisherValues.push
+            this.publisherValues.push
             (
                 {
                     value:   res.publisherId,
@@ -89,11 +97,11 @@ export class NewBookViewComponent implements OnInit
         }));
 
         this._genreConfig.genre.forEach(((res:any) => {
-            this._selectedGenre.push({
+            this.selectedGenre.push({
                 id:         res.genreId,
                 isSelected: false
             });
-            this._genreValues.push
+            this.genreValues.push
             (
                 {
                     id:   res.genreId,
@@ -101,12 +109,6 @@ export class NewBookViewComponent implements OnInit
                 }
             );
         }));
-    }
-
-    public setSelectedClassForListElement(isSelected:boolean, genreId:string):void
-    {
-        !(isSelected) ? document.getElementById(genreId).classList.add('selected') :
-            document.getElementById(genreId).classList.remove('selected');
     }
 
     private openAddGenreOverlay():void

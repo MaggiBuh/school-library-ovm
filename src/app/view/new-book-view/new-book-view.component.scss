@@ -1,40 +1,44 @@
-.genre-list
+.genre-container
 {
-    list-style: none;
-    padding: 0;
-    background-color: white;
-    border-radius: 5px;
-    .genre-entry
+    line-height: 28px;
+    .genre-list
     {
-        border-bottom: 1px solid #E0E0E0;
-        height: 36px;
-        .checkbox-label
+        list-style: none;
+        padding: 0;
+        background-color: white;
+        border-radius: 5px;
+        .genre-entry
         {
-            width: 100%;
-            height: 100%;
-            &:hover
-            {
-                cursor: pointer;
-                background-color: #999999;
-            }
-            .checkbox-container
+            border-bottom: 1px solid #E0E0E0;
+            height: 36px;
+            .checkbox-label
             {
                 width: 100%;
                 height: 100%;
-                .genre-checkbox
+                &:hover
                 {
-                    line-height: 36px;
-                    margin-left: 10px;
-                    .genre-name
+                    cursor: pointer;
+                    background-color: #999999;
+                }
+                .checkbox-container
+                {
+                    width: 100%;
+                    height: 100%;
+                    .genre-checkbox
                     {
-                        margin-left: 5px;
+                        line-height: 36px;
+                        margin-left: 10px;
+                        .genre-name
+                        {
+                            margin-left: 5px;
+                        }
                     }
                 }
             }
         }
-    }
-    .genre-entry:last-child
-    {
-        border: none;
+        .genre-entry:last-child
+        {
+            border: none;
+        }
     }
 }
