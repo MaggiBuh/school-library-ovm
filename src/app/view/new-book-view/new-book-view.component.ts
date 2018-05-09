@@ -6,6 +6,7 @@ import { TerraSuggestionBoxValueInterface } from '@plentymarkets/terra-component
 import { AuthorsConfig } from '../data/authores.config';
 import { StoragesConfig } from '../data/storages.config';
 import { PublisherConfig } from '../data/publisher.config';
+import { GenreConfig } from '../data/genre.config';
 
 @Component({
     selector: 'new-book-view',
@@ -18,10 +19,13 @@ export class NewBookViewComponent implements OnInit
     private _authorValues:Array<TerraSuggestionBoxValueInterface> = [];
     private _publisherValues:Array<TerraSuggestionBoxValueInterface> = [];
     private _storageValues:Array<TerraSuggestionBoxValueInterface> = [];
+    private _genreValues:Array<object> = [];
+    private _selectedGenre:Array<object> = [];
 
     public constructor(private _authorsConfig:AuthorsConfig,
                        private _storagesConfig:StoragesConfig,
-                       private _publisherConfig:PublisherConfig)
+                       private _publisherConfig:PublisherConfig,
+                       private _genreConfig:GenreConfig,)
     {
     }
 
@@ -83,5 +87,31 @@ export class NewBookViewComponent implements OnInit
                 }
             );
         }));
+
+        this._genreConfig.genre.forEach(((res:any) => {
+            this._selectedGenre.push({
+                id:         res.genreId,
+                isSelected: false
+            });
+            this._genreValues.push
+            (
+                {
+                    id:   res.genreId,
+                    name: res.genreName
+                }
+            );
+        }));
     }
+
+    public setSelectedClassForListElement(isSelected:boolean, genreId:string):void
+    {
+        !(isSelected) ? document.getElementById(genreId).classList.add('selected') :
+            document.getElementById(genreId).classList.remove('selected');
+    }
+
+    private openAddGenreOverlay():void
+    {
+        //TODO
+    }
+
 }

@@ -24,6 +24,7 @@ import { BookDataService } from './view/book-data-service/book-data.service';
 import { AuthorsConfig } from './view/data/authores.config';
 import { PublisherConfig } from './view/data/publisher.config';
 import { StoragesConfig } from './view/data/storages.config';
+import { GenreConfig } from './view/data/genre.config';
 
 const appRoutes:Routes = [
     {
@@ -70,6 +71,7 @@ const appRoutes:Routes = [
     ],
     providers:    [
         BookDataService,
+        GenreConfig,
         AuthorsConfig,
         PublisherConfig,
         StoragesConfig,

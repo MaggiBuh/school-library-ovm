@@ -4,6 +4,7 @@ import { PhpConnectionHelper } from '../php-connection-helper/php-connection-hel
 import { AuthorsConfig } from '../data/authores.config';
 import { PublisherConfig } from '../data/publisher.config';
 import { StoragesConfig } from '../data/storages.config';
+import { GenreConfig } from '../data/genre.config';
 
 @Injectable()
 export class BookDataService
@@ -11,7 +12,8 @@ export class BookDataService
     public constructor(private _phpConnectionHelper:PhpConnectionHelper,
                        private _authorsConfig:AuthorsConfig,
                        private _publisherConfig:PublisherConfig,
-                       private _storagesConfig:StoragesConfig)
+                       private _storagesConfig:StoragesConfig,
+                       private _genreConfig:GenreConfig)
     {
         //_authorsConfig.authores = [];
         //_publisherConfig.publishers = [];
@@ -24,16 +26,16 @@ export class BookDataService
             this._phpConnectionHelper.getAllAuthors(),
             this._phpConnectionHelper.getAllPublishers(),
             this._phpConnectionHelper.getAllStorages(),
-            (authors:any, publishers:any, storages:any) =>
-            {
+            this._phpConnectionHelper.getAllGenre(),
+            (authors:any, publishers:any, storages:any, genre:any) => {
                 return {
                     authors:    authors.json(),
                     publishers: publishers.json(),
-                    storages:   storages.json()
+                    storages:   storages.json(),
+                    genre:      genre.json(),
                 };
             }
-        ).subscribe((data:any) =>
-        {
+        ).subscribe((data:any) => {
             for(let key in data.authors)
             {
                 this._authorsConfig.authores.push
@@ -70,6 +72,16 @@ export class BookDataService
                         storageId:   data.storages[key].id,
                         storageName: data.storages[key].name,
                         storageType: data.storages[key].type
+                    }
+                );
+            }
+            for(let key in data.genre)
+            {
+                this._genreConfig.genre.push
+                (
+                    {
+                        genreId:   data.genre[key].id,
+                        genreName: data.genre[key].name,
                     }
                 );
             }

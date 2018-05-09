@@ -38,7 +38,34 @@ body::-webkit-scrollbar
     color: #9E9E9E !important;
 }
 
-.noPadding {
+.noPadding
+{
     padding: 0 !important;
     margin: 0 !important;
+}
+
+.genre-portlet
+{
+    .portlet_body
+    {
+        padding: 0 !important;
+    }
+    //.genre-checkbox
+    //{
+    //    width: 100% !important;
+    //    height: 100% !important;
+    //    align-items: center !important;
+    //    div
+    //    {
+    //        width: 100% !important;
+    //        height: 100% !important;
+    //    }
+    //    .input-control
+    //    {
+    //        margin: 0 !important;
+    //        display: block !important;
+    //        width: 100% !important;
+    //        height: 100% !important;
+    //    }
+    //}
 }

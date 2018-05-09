@@ -65,14 +65,35 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <terra-portlet inputPortletHeader="Genre"
+                                    <div class="col-md-11">
+                                        <terra-portlet ngClass="genre-portlet"
+                                                       inputPortletHeader="Genre"
                                                        [inputCollapsed]="true"
                                                        [inputIsCollapsable]="true">
                                             <div>
-                                                Test
+                                                <ul class="genre-list">
+                                                    <li class="genre-entry" *ngFor="let genre of _genreValues; let i = index"
+                                                        [attr.data-index]="i">
+                                                        <label id="{{genre.id}}"
+                                                               class="checkbox-label">
+                                                            <div class="checkbox-container">
+                                                                <span class="genre-checkbox">
+                                                                    <input type="checkbox"
+                                                                           [(ngModel)]="_selectedGenre[i].isSelected"
+                                                                           (click)="setSelectedClassForListElement(_selectedGenre[i].isSelected, genre.id)">
+                                                                    <span class="genre-name">{{genre.name}}</span>
+                                                                </span>
+                                                            </div>
+                                                        </label>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </terra-portlet>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <terra-button inputIcon="icon-add"
+                                                      [inputIsTertiary]="true">
+                                        </terra-button>
                                     </div>
                                 </div>
                             </div>
