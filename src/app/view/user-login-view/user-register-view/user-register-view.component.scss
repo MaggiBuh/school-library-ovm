@@ -1,0 +1,23 @@
+.register-wrapper
+{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .register-container
+    {
+        width: 400px;
+        .register-inputs
+        {
+            margin-bottom: 10px;
+        }
+        .register-footer
+        {
+            margin: 0;
+            .submit-button
+            {
+                padding: 0;
+            }
+        }
+    }
+}

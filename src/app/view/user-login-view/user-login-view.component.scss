@@ -1,0 +1,38 @@
+.header
+{
+    margin: 0 0 10px 0;
+    .login-form
+    {
+        margin-bottom: 5px;
+    }
+    
+    .registration-link
+    {
+        a
+        {
+            text-decoration: none;
+        }
+    }
+    
+    .profile
+    {
+        float: right;
+        .username
+        {
+            margin-right: 10px;
+            float: left;
+        }
+    }
+    
+    .vcenter
+    {
+        display: flex;
+        align-items: center;
+    }
+    
+    .custom-row
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

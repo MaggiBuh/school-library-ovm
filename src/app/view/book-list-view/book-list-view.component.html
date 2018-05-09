@@ -1,0 +1,108 @@
+<terra-portlet ngClass="search-portlet">
+    <div class="search-bar-container">
+        <div>
+            <terra-text-input [(ngModel)]="_searchValue"
+                              (ngModelChange)="checkInput()"
+                              inputName="book search">
+            </terra-text-input>
+        </div>
+    </div>
+</terra-portlet>
+<div *ngFor="let book of _books" id="{{book.bookId + '_container'}}">
+    <terra-portlet>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1 book-image">
+                    <img src="{{book.imageUrl}}">
+                </div>
+                <div class="col-md-11">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 noPadding">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <h4>{{book.BookName}}</h4>
+                                        </div>
+                                        <div class="col-md-2 noPadding">
+                                            <div class="text-md-right">
+                                                <terra-button inputCaption="Book Details"
+                                                              (outputClicked)="openBookDetailsOverlay(book)">
+                                                </terra-button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div><strong>Author:</strong>
+                                    <ng-container *ngFor="let author of book.author">{{author.firstname + ' ' + author.lastname}}<br/>
+                                    </ng-container>
+                                </div>
+                                <div><strong>Verlag:</strong>
+                                    <ng-container *ngFor="let publisher of book.publisher">{{publisher.name}}</ng-container>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div><strong>Beschreibung:</strong></div>
+                                <div [innerHTML]="book.shortBookDescription">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </terra-portlet>
+</div>
+<terra-overlay #bookDetailOverlay
+               inputOverlayTitle="Detail View"
+               [inputIsLarge]="true">
+    <div class="overlay-book-details">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 book-image">
+                    <img src="{{_currentBook.imageUrl}}">
+                </div>
+                <div class="col-md-10">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 noPadding">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h2>{{_currentBook.BookName}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div><strong>Author:</strong>
+                                    <ng-container
+                                        *ngFor="let author of _currentBook.author">{{author.firstname + ' ' + author.lastname}}<br/>
+                                    </ng-container>
+                                </div>
+                                <div><strong>Verlag:</strong>
+                                    <ng-container *ngFor="let publisher of _currentBook.publisher">{{publisher.name}}</ng-container>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div><strong>Beschreibung:</strong></div>
+                                <div>{{_currentBook.bookDescription}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngFor="let stock of _currentBook.storage">
+        <div>{{stock.name + ' - ' + stock.type}}:
+            <div>{{stock.current_amount + '/' + stock.amount}}</div>
+        </div>
+    </div>
+</terra-overlay>

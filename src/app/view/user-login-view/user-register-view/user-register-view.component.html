@@ -1,0 +1,51 @@
+<div class="register-wrapper">
+    <div class="register-container">
+        <terra-portlet>
+            <h1>Registrieren</h1>
+            <div class="register-inputs">
+                <terra-text-input inputName="Vorname"
+                                  [(ngModel)]="_userData['firstName']">
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="Nachname"
+                                  [(ngModel)]="_userData['lastName']">
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="Username"
+                                  [(ngModel)]="_userData['userName']">
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="Klassenbezeichnung"
+                                  [(ngModel)]="_userData['class']">
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="Passwort"
+                                  [inputIsPassword]=true
+                                  [(ngModel)]="_userData['password']">
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="Passwort wiederholen"
+                                  [inputIsPassword]=true
+                                  [(ngModel)]="_userData['repeat_password']">
+                </terra-text-input>
+            </div>
+            <div class="register-inputs">
+                <terra-text-input inputName="E-Mail"
+                                  [(ngModel)]="_userData['email']">
+                </terra-text-input>
+            </div>
+            <div class="row register-footer">
+                <div class="text-md-right col-md-12 submit-button">
+                    <terra-button inputCaption="Registrieren"
+                                  (outputClicked)="validateAndSave(_userData)">
+                    </terra-button>
+                </div>
+            </div>
+        </terra-portlet>
+    </div>
+</div>

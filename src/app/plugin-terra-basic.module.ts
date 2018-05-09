@@ -1,29 +1,89 @@
-import { NgModule } from '@angular/core';
+import {
+    APP_INITIALIZER,
+    NgModule
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PluginTerraBasicComponent } from './plugin-terra-basic.component';
-import { StartComponent } from './views/start/start.component';
+import { TerraComponentsModule } from '@plentymarkets/terra-components/app/terra-components.module';
 import { HttpModule } from '@angular/http';
-import {
-    L10nLoader,
-    TranslationModule
-} from 'angular-l10n';
+import { TranslationModule } from 'angular-l10n';
 import { FormsModule } from '@angular/forms';
-import { l10nConfig } from './core/localization/l10n.config';
-import { HttpClientModule } from '@angular/common/http';
-import { TerraComponentsModule } from '@plentymarkets/terra-components/app';
+import { LocalizationConfig } from './core/localization/terra-localization.config';
+import { BookListViewComponent } from './view/book-list-view/book-list-view.component';
+import { UserLoginViewComponent } from './view/user-login-view/user-login-view.component';
+import { UserRegisterViewComponent } from './view/user-login-view/user-register-view/user-register-view.component';
+import {
+    RouterModule,
+    Routes
+} from '@angular/router';
+import { PhpConnectionHelper } from './view/php-connection-helper/php-connection-helper';
+import { UserProfileViewComponent } from './view/user-profile-view/user-profile-view.component';
+import { DataStorageConfig } from './view/data/data-storage.config';
+import { NewBookViewComponent } from './view/new-book-view/new-book-view.component';
+import { BookDataService } from './view/book-data-service/book-data.service';
+import { AuthorsConfig } from './view/data/authores.config';
+import { PublisherConfig } from './view/data/publisher.config';
+import { StoragesConfig } from './view/data/storages.config';
+import { GenreConfig } from './view/data/genre.config';
+
+const appRoutes:Routes = [
+    {
+        path:      'registrierung',
+        component: UserRegisterViewComponent
+    },
+    {
+        path:      'profile',
+        component: UserProfileViewComponent
+    },
+    {
+        path:      'home',
+        component: BookListViewComponent
+    },
+    {
+        path:      'new-book',
+        component: NewBookViewComponent
+    },
+    {
+        path:       '',
+        redirectTo: '/home',
+        pathMatch:  'full'
+    },
+];
 
 @NgModule({
     imports:      [
         BrowserModule,
         HttpModule,
         FormsModule,
-        HttpClientModule,
-        TranslationModule.forRoot(l10nConfig),
-        TerraComponentsModule.forRoot()
+        TranslationModule.forRoot(),
+        TerraComponentsModule.forRoot(),
+        RouterModule.forRoot(
+            appRoutes
+        )
     ],
     declarations: [
         PluginTerraBasicComponent,
-        StartComponent
+        BookListViewComponent,
+        UserLoginViewComponent,
+        UserRegisterViewComponent,
+        UserProfileViewComponent,
+        NewBookViewComponent
+    ],
+    providers:    [
+        BookDataService,
+        GenreConfig,
+        AuthorsConfig,
+        PublisherConfig,
+        StoragesConfig,
+        DataStorageConfig,
+        PhpConnectionHelper,
+        LocalizationConfig,
+        {
+            provide:    APP_INITIALIZER,
+            useFactory: initLocalization,
+            deps:       [LocalizationConfig],
+            multi:      true
+        }
     ],
     bootstrap:    [
         PluginTerraBasicComponent
@@ -31,8 +91,9 @@ import { TerraComponentsModule } from '@plentymarkets/terra-components/app';
 })
 export class PluginTerraBasicModule
 {
-    constructor(public l10nLoader:L10nLoader)
-    {
-        this.l10nLoader.load();
-    }
+}
+
+export function initLocalization(localizationConfig:LocalizationConfig):Function
+{
+    return () => localizationConfig.load();
 }
