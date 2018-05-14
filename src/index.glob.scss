@@ -3,11 +3,6 @@
 @import '../node_modules/@plentymarkets/terra-components/app/assets/themes/theme-dark-standard.scss';
 @import '../node_modules/@plentymarkets/terra-components/app/assets/themes/theme-dark-compact.scss';
 
-body
-{
-    padding: 15px !important;
-}
-
 body::-webkit-scrollbar
 {
     width: 0 !important
@@ -51,22 +46,32 @@ body::-webkit-scrollbar
     {
         padding: 0 !important;
     }
-    //.genre-checkbox
-    //{
-    //    width: 100% !important;
-    //    height: 100% !important;
-    //    align-items: center !important;
-    //    div
-    //    {
-    //        width: 100% !important;
-    //        height: 100% !important;
-    //    }
-    //    .input-control
-    //    {
-    //        margin: 0 !important;
-    //        display: block !important;
-    //        width: 100% !important;
-    //        height: 100% !important;
-    //    }
-    //}
+}
+
+.unicorn
+{
+    background-color: #FFCEE9 !important;
+    
+    .modal-header
+    {
+        .btn-handler
+        {
+            .btn
+            {
+                background-color: white !important;
+            }
+        }
+    }
+    .btn-handler
+    {
+        .btn
+        {
+            background-color: #A7005C !important;
+        }
+    }
+    
+    .login-view
+    {
+        background-color: #E6007E !important;
+    }
 }
