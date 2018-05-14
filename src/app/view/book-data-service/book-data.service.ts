@@ -21,6 +21,12 @@ export class BookDataService
 
     public setBookData():void
     {
+        this._authorsConfig.authores = [];
+        this._publisherConfig.publishers = [];
+        this._storagesConfig.storages = [];
+        this._genreConfig.genre = [];
+        this._ownersConfig.owners = [];
+
         Observable.combineLatest(
             this._phpConnectionHelper.getAllAuthors(),
             this._phpConnectionHelper.getAllPublishers(),

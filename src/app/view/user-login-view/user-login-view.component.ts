@@ -15,11 +15,11 @@ import { DataStorageConfig } from '../data/data-storage.config';
 })
 export class UserLoginViewComponent implements OnInit
 {
-    private _userName:string;
-    private _password:string;
-    private _currentUser:any;
+    public userName:string;
+    public password:string;
     public loggedIn:boolean = false;
-    private _buttonOptionList:Array<TerraButtonInterface> = [];
+    private _currentUser:any;
+    public buttonOptionList:Array<TerraButtonInterface> = [];
 
     public constructor(private _phpConnectionHelper:PhpConnectionHelper,
                        private _router:Router,
@@ -39,7 +39,6 @@ export class UserLoginViewComponent implements OnInit
             this._phpConnectionHelper.loginWithExistingAccount(userName, password).subscribe((res) => {
                 this._currentUser = res.json();
                 this.loggedIn = true;
-                console.log(this._currentUser);
                 this.initButtonListAfterLogin();
             });
         }
@@ -59,6 +58,7 @@ export class UserLoginViewComponent implements OnInit
         this.loggedIn = false;
         this._storageConfig.storage = [];
         this._currentUser = [];
+        this.buttonOptionList = [];
         this._router.navigateByUrl('/home');
     }
 
@@ -68,26 +68,45 @@ export class UserLoginViewComponent implements OnInit
         this._router.navigate(['/profile']);
     }
 
+    private changeCurrentTheme():void
+    {
+        let pageBody:HTMLCollectionOf<Element> = document.getElementsByClassName('dark-standard');
+        if(pageBody[0].className.includes('unicorn'))
+        {
+            pageBody[0].classList.remove('unicorn');
+        }
+        else
+        {
+            pageBody[0].classList.add('unicorn');
+        }
+    }
+
     private initButtonListAfterLogin():void
     {
-        let test:boolean = this._currentUser.role === 1;
-        console.log(test + '!');
-        this._buttonOptionList.push({
-            caption:       'Profile',
-            icon:          'fas fa-user-circle',
-            clickFunction: ():void => this.openProfileViewWithCurrentUserData(this._currentUser)
-        });
-        this._buttonOptionList.push({
-            caption:       'New Book',
-            icon:          'fas fa-plus-circle',
-            isHidden:      this._currentUser.role === 1,
-            clickFunction: ():void => this.openNewBookView()
-        });
-        this._buttonOptionList.push({
-            caption:       'Logout',
-            icon:          'fas fa-sign-out-alt',
-            clickFunction: ():void => this.logoutCurrentUser()
-        });
+        let checkIfCurrentUserHasAdminRole:boolean = this._currentUser.role != 1;
+        this.buttonOptionList.push(
+            {
+                caption:       'Profile',
+                icon:          'fas fa-user-circle',
+                clickFunction: ():void => this.openProfileViewWithCurrentUserData(this._currentUser)
+            },
+            {
+                caption:       'New Book',
+                icon:          'fas fa-plus-circle',
+                isDisabled:    checkIfCurrentUserHasAdminRole,
+                clickFunction: ():void => this.openNewBookView()
+            },
+            {
+                caption:       'Change Theme',
+                icon:          'fas fa-exchange-alt',
+                clickFunction: ():void => this.changeCurrentTheme()
+            },
+            {
+                caption:       'Logout',
+                icon:          'fas fa-sign-out-alt',
+                clickFunction: ():void => this.logoutCurrentUser()
+            }
+        );
     }
 
 }

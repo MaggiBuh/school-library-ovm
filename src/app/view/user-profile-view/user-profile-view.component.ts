@@ -53,6 +53,11 @@ export class UserProfileViewComponent implements OnInit
         this._router.navigate(['/new-book']);
     }
 
+    public checkIfCurrentUserHasAdminRole():boolean
+    {
+        return this._currentUser['role'] == 1;
+    }
+
     private validateAndSaveProfileData(overlay:TerraOverlayComponent):void
     {
         this._alert.addAlert({

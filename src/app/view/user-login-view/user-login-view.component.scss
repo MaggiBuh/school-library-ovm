@@ -1,38 +1,47 @@
-.header
+.login-view
 {
-    margin: 0 0 10px 0;
-    .login-form
+    background-color: #275FA6;
+    padding: 10px !important;
+    border-bottom: 1px solid black;
+    .header
     {
-        margin-bottom: 5px;
-    }
-    
-    .registration-link
-    {
-        a
+        margin: 0 0 10px 0;
+        .login-form
         {
-            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        
+        .registration-link
+        {
+            a
+            {
+                text-decoration: none;
+            }
+        }
+        
+        .profile
+        {
+            float: right;
+            .username
+            {
+                margin-right: 10px;
+                float: left;
+                color: white;
+                font-size: 20px;
+            }
+        }
+        
+        .vcenter
+        {
+            display: flex;
+            align-items: center;
+        }
+        
+        .custom-row
+        {
+            display: flex;
+            flex-wrap: wrap;
         }
     }
     
-    .profile
-    {
-        float: right;
-        .username
-        {
-            margin-right: 10px;
-            float: left;
-        }
-    }
-    
-    .vcenter
-    {
-        display: flex;
-        align-items: center;
-    }
-    
-    .custom-row
-    {
-        display: flex;
-        flex-wrap: wrap;
-    }
 }
