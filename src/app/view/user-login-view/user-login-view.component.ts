@@ -39,6 +39,7 @@ export class UserLoginViewComponent implements OnInit
             this._phpConnectionHelper.loginWithExistingAccount(userName, password).subscribe((res) => {
                 this._currentUser = res.json();
                 this.loggedIn = true;
+                console.log(this._currentUser);
                 this.initButtonListAfterLogin();
             });
         }
@@ -69,7 +70,8 @@ export class UserLoginViewComponent implements OnInit
 
     private initButtonListAfterLogin():void
     {
-        console.log(this._currentUser.role === 1);
+        let test:boolean = this._currentUser.role === 1;
+        console.log(test + '!');
         this._buttonOptionList.push({
             caption:       'Profile',
             icon:          'fas fa-user-circle',
