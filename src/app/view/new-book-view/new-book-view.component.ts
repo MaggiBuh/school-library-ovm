@@ -7,6 +7,7 @@ import { AuthorsConfig } from '../data/authores.config';
 import { StoragesConfig } from '../data/storages.config';
 import { PublisherConfig } from '../data/publisher.config';
 import { GenreConfig } from '../data/genre.config';
+import { OwnersConfig } from '../data/owners.config';
 
 @Component({
     selector: 'new-book-view',
@@ -26,7 +27,8 @@ export class NewBookViewComponent implements OnInit
     public constructor(private _authorsConfig:AuthorsConfig,
                        private _storagesConfig:StoragesConfig,
                        private _publisherConfig:PublisherConfig,
-                       private _genreConfig:GenreConfig)
+                       private _genreConfig:GenreConfig,
+                       private _ownersConfig:OwnersConfig)
     {
     }
 
@@ -106,6 +108,16 @@ export class NewBookViewComponent implements OnInit
                 {
                     id:   res.genreId,
                     name: res.genreName
+                }
+            );
+        }));
+
+        this._ownersConfig.owners.forEach(((res:any) => {
+            this.ownerValues.push
+            (
+                {
+                    value:   res.ownerId,
+                    caption: res.ownerCompany ? res.ownerCompany : res.ownerFirstName + ' ' + res.ownerLastName
                 }
             );
         }));
