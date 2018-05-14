@@ -25,6 +25,7 @@ import { StoragesConfig } from './view/data/storages.config';
 import { GenreConfig } from './view/data/genre.config';
 import { HttpClientModule } from '@angular/common/http';
 import { l10nConfig } from './core/localization/l10n.config';
+import { OwnersConfig } from './view/data/owners.config';
 
 const appRoutes:Routes = [
     {
@@ -75,6 +76,7 @@ const appRoutes:Routes = [
         AuthorsConfig,
         PublisherConfig,
         StoragesConfig,
+        OwnersConfig,
         DataStorageConfig,
         PhpConnectionHelper,
     ],
