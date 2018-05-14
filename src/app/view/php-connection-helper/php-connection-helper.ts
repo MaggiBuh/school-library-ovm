@@ -74,6 +74,17 @@ export class PhpConnectionHelper
         );
     }
 
+    public getAllOwners():Observable<any>
+    {
+        let url:string = 'assets/php/owners/get/GetAllOwners.php';
+        return this._http.get(
+            url,
+            {
+                headers: this._header
+            }
+        );
+    }
+
     public getAllBooks():Observable<any>
     {
         let url:string = 'assets/php/books/get/allBooks/GetAllBooks.php';
