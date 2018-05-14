@@ -5,6 +5,7 @@ import { AuthorsConfig } from '../data/authores.config';
 import { PublisherConfig } from '../data/publisher.config';
 import { StoragesConfig } from '../data/storages.config';
 import { GenreConfig } from '../data/genre.config';
+import { OwnersConfig } from '../data/owners.config';
 
 @Injectable()
 export class BookDataService
@@ -13,26 +14,26 @@ export class BookDataService
                        private _authorsConfig:AuthorsConfig,
                        private _publisherConfig:PublisherConfig,
                        private _storagesConfig:StoragesConfig,
-                       private _genreConfig:GenreConfig)
+                       private _genreConfig:GenreConfig,
+                       private _ownersConfig:OwnersConfig)
     {
-        //_authorsConfig.authores = [];
-        //_publisherConfig.publishers = [];
-        //_storagesConfig.storages = [];
     }
 
-    public setBookData()
+    public setBookData():void
     {
         Observable.combineLatest(
             this._phpConnectionHelper.getAllAuthors(),
             this._phpConnectionHelper.getAllPublishers(),
             this._phpConnectionHelper.getAllStorages(),
             this._phpConnectionHelper.getAllGenre(),
-            (authors:any, publishers:any, storages:any, genre:any) => {
+            this._phpConnectionHelper.getAllOwners(),
+            (authors:any, publishers:any, storages:any, genre:any, owners:any) => {
                 return {
                     authors:    authors.json(),
                     publishers: publishers.json(),
                     storages:   storages.json(),
                     genre:      genre.json(),
+                    owners:     owners.json(),
                 };
             }
         ).subscribe((data:any) => {
@@ -82,6 +83,18 @@ export class BookDataService
                     {
                         genreId:   data.genre[key].id,
                         genreName: data.genre[key].name,
+                    }
+                );
+            }
+            for(let key in data.owners)
+            {
+                this._ownersConfig.owners.push
+                (
+                    {
+                        ownerId:        data.owners[key].id,
+                        ownerFirstName: data.owners[key].firstname,
+                        ownerLastName:  data.owners[key].lastname,
+                        ownerCompany:   data.owners[key].company,
                     }
                 );
             }
