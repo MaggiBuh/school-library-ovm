@@ -29,21 +29,6 @@ export class UserLoginViewComponent implements OnInit
 
     public ngOnInit():void
     {
-        this._buttonOptionList.push({
-            caption:       'Profile',
-            icon:          'fas fa-user-circle',
-            clickFunction: ():void => this.openProfileViewWithCurrentUserData(this._currentUser)
-        });
-        this._buttonOptionList.push({
-            caption:       'New Book',
-            icon:          'fas fa-plus-circle',
-            clickFunction: ():void => this.openNewBookView()
-        });
-        this._buttonOptionList.push({
-            caption:       'Logout',
-            icon:          'fas fa-sign-out-alt',
-            clickFunction: ():void => this.logoutCurrentUser()
-        });
     }
 
     public validateDataAndLogin(userName:string, password:string):void
@@ -54,12 +39,18 @@ export class UserLoginViewComponent implements OnInit
             this._phpConnectionHelper.loginWithExistingAccount(userName, password).subscribe((res) => {
                 this._currentUser = res.json();
                 this.loggedIn = true;
+                this.initButtonListAfterLogin();
             });
         }
         else
         {
             console.log('Felder müssen ausgefüllt sein!');
         }
+    }
+
+    public openNewBookView():void
+    {
+        this._router.navigate(['/new-book']);
     }
 
     private logoutCurrentUser():void
@@ -76,9 +67,25 @@ export class UserLoginViewComponent implements OnInit
         this._router.navigate(['/profile']);
     }
 
-    public openNewBookView():void
+    private initButtonListAfterLogin():void
     {
-        this._router.navigate(['/new-book']);
+        console.log(this._currentUser.role === 1);
+        this._buttonOptionList.push({
+            caption:       'Profile',
+            icon:          'fas fa-user-circle',
+            clickFunction: ():void => this.openProfileViewWithCurrentUserData(this._currentUser)
+        });
+        this._buttonOptionList.push({
+            caption:       'New Book',
+            icon:          'fas fa-plus-circle',
+            isHidden:      this._currentUser.role === 1,
+            clickFunction: ():void => this.openNewBookView()
+        });
+        this._buttonOptionList.push({
+            caption:       'Logout',
+            icon:          'fas fa-sign-out-alt',
+            clickFunction: ():void => this.logoutCurrentUser()
+        });
     }
 
 }
