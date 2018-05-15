@@ -6,7 +6,7 @@
 	"scripts": {
 		"server:dev": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch",
 		"start": "npm run server:dev",
-		"build": "gulp build",
+		"build": "npm run clean:dist && webpack --config config/webpack.prod.js  --progress --profile --bail && gulp build",
 		"clean:dist": "npm run rimraf -- dist",
 		"rimraf": "rimraf",
 		"test": "npm run lint",
