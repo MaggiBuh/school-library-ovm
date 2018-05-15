@@ -4,7 +4,7 @@ This is a School Library App.
     
 ## Powered By 
 - **Tobias Wagner**
-- **Jaqueline Jashke**
+- **Jacqueline Jashke**
 - **Sebastian Schmidt**
 - **Jonathan Bach**
 - **Gero Kurt Gimbel**
