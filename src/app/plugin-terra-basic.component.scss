@@ -9,3 +9,34 @@
     padding: 15px !important;
     padding-top: 20px !important;
 }
+
+@keyframes marquee
+{
+    0%
+    {
+        text-indent: -100%
+    }
+    100%
+    {
+        text-indent: 100%
+    }
+}
+
+.marquee
+{
+    display: none;
+    img
+    {
+        width: 100px;
+    }
+    margin: auto;
+    padding: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: marquee 5s linear infinite;
+}
+
+.marquee:hover
+{
+    animation-play-state: paused;
+}
