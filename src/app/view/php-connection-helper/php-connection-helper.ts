@@ -95,4 +95,34 @@ export class PhpConnectionHelper
             }
         );
     }
+
+    public insertNewGenre(name:string):Observable<any>
+    {
+        let url:string = 'assets/php/genre/insert/InsertNewGenre.php';
+
+        return this._http.post(
+            url,
+            {
+                name: name,
+            },
+            {
+                headers: this._header
+            }
+        );
+    }
+
+    public insertNewOwner(newOwnerData:object):Observable<any>
+    {
+        let url:string = 'assets/php/owners/insert/InsertNewOwner.php';
+
+        return this._http.post(
+            url,
+            newOwnerData,
+            {
+                headers: this._header
+            }
+        );
+    }
+
+
 }
