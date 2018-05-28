@@ -50,7 +50,7 @@ export class UserProfileViewComponent implements OnInit
 
     public openNewBookView():void
     {
-        this._router.navigate(['/new-book']);
+        this._router.navigateByUrl('new-book');
     }
 
     public checkIfCurrentUserHasAdminRole():boolean
