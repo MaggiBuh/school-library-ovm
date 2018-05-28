@@ -42,14 +42,21 @@ body::-webkit-scrollbar
 
 .genre-portlet
 {
-    .portlet_body
+    .portlet-body
     {
-        padding: 0 !important;
+        max-height: 155px !important;
+        overflow-y: scroll !important;
     }
 }
 
 .unicorn
 {
+    
+    .marquee
+    {
+        display: block !important;
+    }
+    
     background-color: #FFCEE9 !important;
     
     .modal-header
