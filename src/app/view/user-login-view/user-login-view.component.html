@@ -1,12 +1,12 @@
-<div class="login-view">
+<div class="login-view container-fluid">
     <div class="row header">
-        <div class="col-md-7 vcenter">
+        <div class="col-md-7">
             <a routerLink="/home" routerLinkActive="active">
-                <img src="https://drive.google.com/uc?id=1i_NhcdOzp07bhON1VG3dZmYu5CbPCQEM">
+                <img src="https://drive.google.com/uc?id=1ffGUN7CJ2Dz_uFcJobtnKWqnyrrtmiW4">
             </a>
         </div>
         <div class="col-md-5 text-md-right">
-            <div *ngIf="loggedIn" class="profile vcenter">
+            <div *ngIf="loggedIn" class="profile">
                 <div class="username">{{_currentUser.userName}}</div>
                 <terra-button-with-options ngClass="profile-button"
                                            inputIcon="fas fa-bars"
@@ -20,13 +20,15 @@
                         <div class="row login-form">
                             <div class="col-md-5">
                                 <terra-text-input inputName="Username"
-                                                  [(ngModel)]="userName">
+                                                  [(ngModel)]="userName"
+                                                  (keydown.enter)="validateDataAndLogin(userName, password)">
                                 </terra-text-input>
                             </div>
                             <div class="col-md-5">
                                 <terra-text-input inputName="Password"
                                                   [(ngModel)]="password"
-                                                  [inputIsPassword]=true>
+                                                  [inputIsPassword]=true
+                                                  (keydown.enter)="validateDataAndLogin(userName, password)">
                                 </terra-text-input>
                             </div>
                             <div class="col-md-2">

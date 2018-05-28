@@ -15,11 +15,12 @@ import { DataStorageConfig } from '../data/data-storage.config';
 })
 export class UserLoginViewComponent implements OnInit
 {
+
     public userName:string;
     public password:string;
     public loggedIn:boolean = false;
-    private _currentUser:any;
     public buttonOptionList:Array<TerraButtonInterface> = [];
+    private _currentUser:any;
 
     public constructor(private _phpConnectionHelper:PhpConnectionHelper,
                        private _router:Router,
@@ -38,6 +39,7 @@ export class UserLoginViewComponent implements OnInit
         {
             this._phpConnectionHelper.loginWithExistingAccount(userName, password).subscribe((res) => {
                 this._currentUser = res.json();
+                this._storageConfig.storage = this._currentUser;
                 this.loggedIn = true;
                 this.initButtonListAfterLogin();
             });
@@ -50,7 +52,7 @@ export class UserLoginViewComponent implements OnInit
 
     public openNewBookView():void
     {
-        this._router.navigate(['/new-book']);
+        this._router.navigateByUrl('new-book');
     }
 
     private logoutCurrentUser():void
@@ -59,13 +61,12 @@ export class UserLoginViewComponent implements OnInit
         this._storageConfig.storage = [];
         this._currentUser = [];
         this.buttonOptionList = [];
-        this._router.navigateByUrl('/home');
+        this._router.navigateByUrl('home');
     }
 
     private openProfileViewWithCurrentUserData(currentUser:Array<any>):void
     {
-        this._storageConfig.storage = currentUser;
-        this._router.navigate(['/profile']);
+        this._router.navigateByUrl('profile');
     }
 
     private changeCurrentTheme():void
@@ -108,5 +109,4 @@ export class UserLoginViewComponent implements OnInit
             }
         );
     }
-
 }
