@@ -43,7 +43,7 @@ export class UserRegisterViewComponent implements OnInit
             },
             {headers: this._header}
         ).subscribe(() => {
-            this._router.navigateByUrl('/home');
+            this._router.navigateByUrl('home');
         });
     }
 }

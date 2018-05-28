@@ -34,7 +34,8 @@
                                     </div>
                                     <div class="col-md-1">
                                         <terra-button inputIcon="icon-add"
-                                                      [inputIsTertiary]="true">
+                                                      [inputIsTertiary]="true"
+                                                      (outputClicked)="openAddPublisherOverlay()">
                                         </terra-button>
                                     </div>
                                 </div>
@@ -47,7 +48,8 @@
                                     </div>
                                     <div class="col-md-1">
                                         <terra-button inputIcon="icon-add"
-                                                      [inputIsTertiary]="true">
+                                                      [inputIsTertiary]="true"
+                                                      (outputClicked)="openAddAuthorOverlay()">
                                         </terra-button>
                                     </div>
                                 </div>
@@ -60,7 +62,8 @@
                                     </div>
                                     <div class="col-md-1">
                                         <terra-button inputIcon="icon-add"
-                                                      [inputIsTertiary]="true">
+                                                      [inputIsTertiary]="true"
+                                                      (outputClicked)="openAddStorageOverlay()">
                                         </terra-button>
                                     </div>
                                 </div>
@@ -73,7 +76,8 @@
                                     </div>
                                     <div class="col-md-1">
                                         <terra-button inputIcon="icon-add"
-                                                      [inputIsTertiary]="true">
+                                                      [inputIsTertiary]="true"
+                                                      (outputClicked)="openAddOwnerOverlay()">
                                         </terra-button>
                                     </div>
                                 </div>
@@ -103,7 +107,8 @@
                                     </div>
                                     <div class="col-md-1">
                                         <terra-button inputIcon="icon-add"
-                                                      [inputIsTertiary]="true">
+                                                      [inputIsTertiary]="true"
+                                                      (outputClicked)="openAddGenreOverlay()">
                                         </terra-button>
                                     </div>
                                 </div>
@@ -123,27 +128,50 @@
         </div>
     </div>
 </div>
-<terra-overlay>
+<terra-overlay #newAuthorOverlay
+               inputOverlayTitle="Add new author"
+               [inputPrimaryButtonInterface]="authorOverlayButton">
     <div>
         Author
     </div>
 </terra-overlay>
-<terra-overlay>
+<terra-overlay #newStorageOverlay
+               inputOverlayTitle="Add new storage"
+               [inputPrimaryButtonInterface]="storageOverlayButton">
     <div>
         Storage
     </div>
 </terra-overlay>
-<terra-overlay>
+<terra-overlay #newOwnerOverlay
+               inputOverlayTitle="Add new owner"
+               [inputPrimaryButtonInterface]="ownerOverlayButton">
     <div>
-        Owner
+        <terra-text-input inputName="Company"
+                          [(ngModel)]="newOwnerData.company"
+                          [inputIsDisabled]="!checkIfInputIsEmpty(newOwnerData.firstName) || !checkIfInputIsEmpty(newOwnerData.lastName)">
+        </terra-text-input>
+        <terra-text-input inputName="Firstname"
+                          [(ngModel)]="newOwnerData.firstName"
+                          [inputIsDisabled]="!checkIfInputIsEmpty(newOwnerData.company)">
+        </terra-text-input>
+        <terra-text-input inputName="Lastname"
+                          [(ngModel)]="newOwnerData.lastName"
+                          [inputIsDisabled]="!checkIfInputIsEmpty(newOwnerData.company)">
+        </terra-text-input>
     </div>
 </terra-overlay>
-<terra-overlay>
+<terra-overlay #newGenreOverlay
+               inputOverlayTitle="Add new genre"
+               [inputPrimaryButtonInterface]="genreOverlayButton">
     <div>
-        Genre
+        <terra-text-input inputName="Genre"
+                          [(ngModel)]="newGenreData">
+        </terra-text-input>
     </div>
 </terra-overlay>
-<terra-overlay>
+<terra-overlay #newPublisherOverlay
+               inputOverlayTitle="Add new publisher"
+               [inputPrimaryButtonInterface]="publisherOverlayButton">
     <div>
         Publisher
     </div>
