@@ -135,12 +135,6 @@
 			"",
 			"camelCase"
 		],
-		"component-selector": [
-			true,
-			"element",
-			"terra",
-			"kebab-case"
-		],
 		"use-input-property-decorator": true,
 		"use-output-property-decorator": true,
 		"use-host-property-decorator": true,
