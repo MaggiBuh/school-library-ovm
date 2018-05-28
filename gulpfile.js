@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var argv = require('yargs').argv;
+var config = require('./gulp.config.js')();
 
 var increment, sequence, preid;
 
@@ -35,5 +36,5 @@ gulp.task('build-local', function (callback) {
 //copy files from dist to htdocs
 gulp.task('copy-to-htdocs', function () {
     return gulp.src('dist/**/*.*')
-        .pipe(gulp.dest('/Applications/XAMPP/xamppfiles/htdocs'));
+        .pipe(gulp.dest(config.htdocsMacOsPath));
 }); 
