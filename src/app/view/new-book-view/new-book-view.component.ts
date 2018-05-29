@@ -18,6 +18,7 @@ import { OwnerInterface } from './interface/owner.interface';
 import { AuthorInterface } from './interface/author.interface';
 import { StorageInterface } from './interface/storage.interface';
 import { PublisherInterface } from './interface/publisher.interface';
+import { isNullOrUndefined } from 'util';
 
 @Component({
     selector: 'new-book-view',
@@ -65,6 +66,23 @@ export class NewBookViewComponent implements OnInit
             company:   '',
             firstName: '',
             lastName:  ''
+        };
+        this.newAuthorData = {
+            lastName:  '',
+            firstName: '',
+            email:     '',
+            website:   '',
+        };
+        this.newStorageData = {
+            name: '',
+            type: '',
+        };
+        this.newPublisherData = {
+            name:        '',
+            website:     '',
+            email:       '',
+            phoneNumber: '',
+            orderNumber: ''
         };
         this.initOptionButtons();
         this.initSuggestionBoxes();
@@ -132,7 +150,7 @@ export class NewBookViewComponent implements OnInit
                             caption: authorData.firstName + ' ' + authorData.lastName
                         }
                     );
-                    this.newGenreOverlay.hideOverlay();
+                    this.newAuthorOverlay.hideOverlay();
                 });
             }
             else
@@ -199,7 +217,7 @@ export class NewBookViewComponent implements OnInit
                             ownerLastName:  ownerData.lastName
                         }
                     );
-                    this.newGenreOverlay.hideOverlay();
+                    this.newOwnerOverlay.hideOverlay();
                 });
             }
             else
@@ -245,7 +263,7 @@ export class NewBookViewComponent implements OnInit
                             caption: storageData.name + ' - ' + storageData.type
                         }
                     );
-                    this.newGenreOverlay.hideOverlay();
+                    this.newStorageOverlay.hideOverlay();
                 });
             }
             else
@@ -328,14 +346,14 @@ export class NewBookViewComponent implements OnInit
             {
                 this._phpConnectionHelper.insertNewPublisher(publisherData).subscribe((res:any) => {
                     let publisherId:number = res.json();
-                    this.authorValues.push
+                    this.publisherValues.push
                     (
                         {
                             value:   publisherId,
                             caption: publisherData.name + ' - ' + publisherData.orderNumber
                         }
                     );
-                    this.newGenreOverlay.hideOverlay();
+                    this.newPublisherOverlay.hideOverlay();
                 });
             }
             else
@@ -380,59 +398,70 @@ export class NewBookViewComponent implements OnInit
             }
         );
 
-        this._authorsConfig.authores.forEach(((res:any) => {
-            this.authorValues.push
-            (
-                {
-                    value:   res.authorId,
-                    caption: res.authorFirstName + ' ' + res.authorLastName
-                }
-            );
-        }));
-
-        this._storagesConfig.storages.forEach(((res:any) => {
-            this.storageValues.push
-            (
-                {
-                    value:   res.storageId,
-                    caption: res.storageName + ' - ' + res.storageType
-                }
-            );
-        }));
-
-        this._publisherConfig.publishers.forEach(((res:any) => {
-            this.publisherValues.push
-            (
-                {
-                    value:   res.publisherId,
-                    caption: res.publisherName + ' - ' + res.publisherOrderNumber
-                }
-            );
-        }));
-
-        this._genreConfig.genre.forEach(((res:any) => {
-            this.selectedGenre.push({
-                id:         res.genreId,
-                isSelected: false
-            });
-            this.genreValues.push
-            (
-                {
-                    id:   res.genreId,
-                    name: res.genreName
-                }
-            );
-        }));
-
-        this._ownersConfig.owners.forEach(((res:any) => {
-            this.ownerValues.push
-            (
-                {
-                    value:   res.ownerId,
-                    caption: res.ownerCompany ? res.ownerCompany : res.ownerFirstName + ' ' + res.ownerLastName
-                }
-            );
-        }));
+        if(!isNullOrUndefined(this._authorsConfig.authores) && this._authorsConfig.authores.length > 0)
+        {
+            this._authorsConfig.authores.forEach(((res:any) => {
+                this.authorValues.push
+                (
+                    {
+                        value:   res.authorId,
+                        caption: res.authorFirstName + ' ' + res.authorLastName
+                    }
+                );
+            }));
+        }
+        if(!isNullOrUndefined(this._storagesConfig.storages) && this._storagesConfig.storages.length > 0)
+        {
+            this._storagesConfig.storages.forEach(((res:any) => {
+                this.storageValues.push
+                (
+                    {
+                        value:   res.storageId,
+                        caption: res.storageName + ' - ' + res.storageType
+                    }
+                );
+            }));
+        }
+        if(!isNullOrUndefined(this._publisherConfig.publishers) && this._publisherConfig.publishers.length > 0)
+        {
+            this._publisherConfig.publishers.forEach(((res:any) => {
+                this.publisherValues.push
+                (
+                    {
+                        value:   res.publisherId,
+                        caption: res.publisherName + ' - ' + res.publisherOrderNumber
+                    }
+                );
+            }));
+        }
+        if(!isNullOrUndefined(this._genreConfig.genre) && this._genreConfig.genre.length > 0)
+        {
+            this._genreConfig.genre.forEach(((res:any) => {
+                this.selectedGenre.push({
+                    id:         res.genreId,
+                    isSelected: false
+                });
+                this.genreValues.push
+                (
+                    {
+                        id:   res.genreId,
+                        name: res.genreName
+                    }
+                );
+            }));
+        }
+        if(!isNullOrUndefined(this._ownersConfig.owners) && this._ownersConfig.owners.length > 0)
+        {
+            this._ownersConfig.owners.forEach(((res:any) => {
+                this.ownerValues.push
+                (
+                    {
+                        value:   res.ownerId,
+                        caption: res.ownerCompany ? res.ownerCompany : res.ownerFirstName + ' ' + res.ownerLastName
+                    }
+                );
+            }));
+        }
     }
 
     private initOptionButtons():void

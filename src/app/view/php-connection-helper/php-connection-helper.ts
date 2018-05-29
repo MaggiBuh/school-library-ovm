@@ -156,7 +156,7 @@ export class PhpConnectionHelper
 
     public insertNewPublisher(newPublishrData:PublisherInterface):Observable<any>
     {
-        let url:string = 'assets/php/publisher/insert/InsertNewPublisherClass.php';
+        let url:string = 'assets/php/publisher/insert/InsertNewPublisher.php';
         return this._http.post(
             url,
             newPublishrData,

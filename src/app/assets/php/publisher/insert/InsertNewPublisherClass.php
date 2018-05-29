@@ -23,7 +23,7 @@ class InsertNewPublisherClass
                   VALUES ('" . $newPublisher['name'] . "', 
                           '" . $newPublisher['website'] . "',
                           '" . $newPublisher['email'] . "',
-                          '" . $newPublisher['phonenumber'] . "',
+                          '" . $newPublisher['phoneNumber'] . "',
                           $orderNumberId)";
 
         $res = $conn->query($query);

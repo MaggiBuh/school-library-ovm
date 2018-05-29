@@ -6,6 +6,7 @@ import { PublisherConfig } from '../data/publisher.config';
 import { StoragesConfig } from '../data/storages.config';
 import { GenreConfig } from '../data/genre.config';
 import { OwnersConfig } from '../data/owners.config';
+import { isNullOrUndefined } from 'util';
 
 @Injectable()
 export class BookDataService
@@ -43,66 +44,81 @@ export class BookDataService
                 };
             }
         ).subscribe((data:any) => {
-            for(let key in data.authors)
+            if(isNullOrUndefined(data.authors.error))
             {
-                this._authorsConfig.authores.push
-                (
-                    {
-                        authorId:        data.authors[key].id,
-                        authorFirstName: data.authors[key].firstname,
-                        authorLastName:  data.authors[key].lastname,
-                        authorEmail:     data.authors[key].email,
-                        authorWebsite:   data.authors[key].website
-                    }
-                );
+                for(let key in data.authors)
+                {
+                    this._authorsConfig.authores.push
+                    (
+                        {
+                            authorId:        data.authors[key].id,
+                            authorFirstName: data.authors[key].firstname,
+                            authorLastName:  data.authors[key].lastname,
+                            authorEmail:     data.authors[key].email,
+                            authorWebsite:   data.authors[key].website
+                        }
+                    );
+                }
             }
-            for(let key in data.publishers)
+            if(isNullOrUndefined(data.publishers.error))
             {
-                this._publisherConfig.publishers.push
-                (
-                    {
-                        publisherId:            data.publishers[key].publisher_id,
-                        publisherName:          data.publishers[key].name,
-                        publisherEmail:         data.publishers[key].email,
-                        publisherWebsite:       data.publishers[key].website,
-                        publisherPhoneNumber:   data.publishers[key].phonenumber,
-                        publisherOrderNumberId: data.publishers[key].ordernumber_id,
-                        publisherOrderNumber:   data.publishers[key].number
-                    }
-                );
+                for(let key in data.publishers)
+                {
+                    this._publisherConfig.publishers.push
+                    (
+                        {
+                            publisherId:            data.publishers[key].publisher_id,
+                            publisherName:          data.publishers[key].name,
+                            publisherEmail:         data.publishers[key].email,
+                            publisherWebsite:       data.publishers[key].website,
+                            publisherPhoneNumber:   data.publishers[key].phonenumber,
+                            publisherOrderNumberId: data.publishers[key].ordernumber_id,
+                            publisherOrderNumber:   data.publishers[key].number
+                        }
+                    );
+                }
             }
-            for(let key in data.storages)
+            if(isNullOrUndefined(data.storages.error))
             {
-                this._storagesConfig.storages.push
-                (
-                    {
-                        storageId:   data.storages[key].id,
-                        storageName: data.storages[key].name,
-                        storageType: data.storages[key].type
-                    }
-                );
+                for(let key in data.storages)
+                {
+                    this._storagesConfig.storages.push
+                    (
+                        {
+                            storageId:   data.storages[key].id,
+                            storageName: data.storages[key].name,
+                            storageType: data.storages[key].type
+                        }
+                    );
+                }
             }
-            for(let key in data.genre)
+            if(isNullOrUndefined(data.genre.error))
             {
-                this._genreConfig.genre.push
-                (
-                    {
-                        genreId:   data.genre[key].id,
-                        genreName: data.genre[key].name,
-                    }
-                );
+                for(let key in data.genre)
+                {
+                    this._genreConfig.genre.push
+                    (
+                        {
+                            genreId:   data.genre[key].id,
+                            genreName: data.genre[key].name,
+                        }
+                    );
+                }
             }
-            for(let key in data.owners)
+            if(isNullOrUndefined(data.owners.error))
             {
-                this._ownersConfig.owners.push
-                (
-                    {
-                        ownerId:        data.owners[key].id,
-                        ownerFirstName: data.owners[key].firstname,
-                        ownerLastName:  data.owners[key].lastname,
-                        ownerCompany:   data.owners[key].company,
-                    }
-                );
+                for(let key in data.owners)
+                {
+                    this._ownersConfig.owners.push
+                    (
+                        {
+                            ownerId:        data.owners[key].id,
+                            ownerFirstName: data.owners[key].firstname,
+                            ownerLastName:  data.owners[key].lastname,
+                            ownerCompany:   data.owners[key].company,
+                        }
+                    );
+                }
             }
         });
     }
