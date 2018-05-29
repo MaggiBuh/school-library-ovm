@@ -10,8 +10,8 @@ class InsertNewAuthorClass
         $conn = $this->_dbConn->getDBConnectionAndCheckIfFailed();
 
         $query = "INSERT INTO author (firstname, lastname, email, website)
-                  VALUES ('" . $newAuthorData['firstname'] . "', 
-                          '" . $newAuthorData['lastname'] . "',
+                  VALUES ('" . $newAuthorData['firstName'] . "', 
+                          '" . $newAuthorData['lastName'] . "',
                           '" . $newAuthorData['email'] . "',
                           '" . $newAuthorData['website'] . "');";
 
@@ -21,6 +21,11 @@ class InsertNewAuthorClass
             echo "Error: " . $query . "<br>" . $conn->error;
         }
 
+        $authorId = $conn->insert_id;
+
         $conn->close();
+        echo json_encode([
+            'authorId' => $authorId
+        ]);
     }
 }

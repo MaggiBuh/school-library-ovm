@@ -4,6 +4,10 @@ import {
     Headers,
     Http
 } from '@angular/http';
+import { OwnerInterface } from '../new-book-view/interface/owner.interface';
+import { AuthorInterface } from '../new-book-view/interface/author.interface';
+import { StorageInterface } from '../new-book-view/interface/storage.interface';
+import { PublisherInterface } from '../new-book-view/interface/publisher.interface';
 
 @Injectable()
 export class PhpConnectionHelper
@@ -111,7 +115,7 @@ export class PhpConnectionHelper
         );
     }
 
-    public insertNewOwner(newOwnerData:object):Observable<any>
+    public insertNewOwner(newOwnerData:OwnerInterface):Observable<any>
     {
         let url:string = 'assets/php/owners/insert/InsertNewOwner.php';
 
@@ -124,5 +128,42 @@ export class PhpConnectionHelper
         );
     }
 
+    public insertNewAuthor(newAuthorData:AuthorInterface):Observable<any>
+    {
+        let url:string = 'assets/php/author/insert/InsertNewAuthor.php';
+
+        return this._http.post(
+            url,
+            newAuthorData,
+            {
+                headers: this._header
+            }
+        );
+    }
+
+    public insertNewStorage(newStorageData:StorageInterface):Observable<any>
+    {
+        let url:string = 'assets/php/storage/insert/InsertNewStorage.php';
+
+        return this._http.post(
+            url,
+            newStorageData,
+            {
+                headers: this._header
+            }
+        );
+    }
+
+    public insertNewPublisher(newPublishrData:PublisherInterface):Observable<any>
+    {
+        let url:string = 'assets/php/publisher/insert/InsertNewPublisherClass.php';
+        return this._http.post(
+            url,
+            newPublishrData,
+            {
+                headers: this._header
+            }
+        );
+    }
 
 }

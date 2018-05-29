@@ -15,6 +15,9 @@ import { GenreConfig } from '../data/genre.config';
 import { OwnersConfig } from '../data/owners.config';
 import { PhpConnectionHelper } from '../php-connection-helper/php-connection-helper';
 import { OwnerInterface } from './interface/owner.interface';
+import { AuthorInterface } from './interface/author.interface';
+import { StorageInterface } from './interface/storage.interface';
+import { PublisherInterface } from './interface/publisher.interface';
 
 @Component({
     selector: 'new-book-view',
@@ -42,6 +45,9 @@ export class NewBookViewComponent implements OnInit
     public publisherOverlayButton:TerraOverlayButtonInterface;
     public newGenreData:string;
     public newOwnerData:OwnerInterface;
+    public newAuthorData:AuthorInterface;
+    public newStorageData:StorageInterface;
+    public newPublisherData:PublisherInterface;
     public selectedGenre:Array<object> = [];
 
     public constructor(private _authorsConfig:AuthorsConfig,
@@ -94,9 +100,50 @@ export class NewBookViewComponent implements OnInit
         this.newPublisherOverlay.showOverlay();
     }
 
-    public validateAndSaveNewAuthorData():void
+    public validateAndSaveNewAuthorData(authorData:AuthorInterface):void
     {
-        //ToDo
+        let checkIfInputIsEmpty:boolean = false;
+
+        if(this.checkIfInputIsEmpty(authorData.email) && this.checkIfInputIsEmpty(authorData.firstName) &&
+           this.checkIfInputIsEmpty(authorData.lastName) && this.checkIfInputIsEmpty(authorData.website))
+        {
+            checkIfInputIsEmpty = true;
+        }
+
+        if(!checkIfInputIsEmpty)
+        {
+            let checkIfAuthorAlreadyExists:boolean = false;
+            this._authorsConfig.authores.forEach((author:any) => {
+
+                if(authorData.firstName.toLowerCase() === author.authorFirstName.toLowerCase() &&
+                   authorData.lastName.toLowerCase() === author.authorLastName.toLowerCase())
+                {
+                    checkIfAuthorAlreadyExists = true;
+                }
+            });
+
+            if(!checkIfAuthorAlreadyExists)
+            {
+                this._phpConnectionHelper.insertNewAuthor(authorData).subscribe((res:any) => {
+                    let authorId:number = res.json();
+                    this.authorValues.push(
+                        {
+                            value:   authorId,
+                            caption: authorData.firstName + ' ' + authorData.lastName
+                        }
+                    );
+                    this.newGenreOverlay.hideOverlay();
+                });
+            }
+            else
+            {
+                console.log('already exists');
+            }
+        }
+        else
+        {
+            console.log('inputs leer!');
+        }
     }
 
     public validateAndSaveNewOwnerData(ownerData:OwnerInterface):void
@@ -166,9 +213,50 @@ export class NewBookViewComponent implements OnInit
         }
     }
 
-    public validateAndSaveNewStorageData():void
+    public validateAndSaveNewStorageData(storageData:StorageInterface):void
     {
-        //ToDo
+        let checkIfInputIsEmpty:boolean = false;
+
+        if(this.checkIfInputIsEmpty(storageData.name) && this.checkIfInputIsEmpty(storageData.type))
+        {
+            checkIfInputIsEmpty = true;
+        }
+
+        if(!checkIfInputIsEmpty)
+        {
+            let checkIfStorageAlreadyExists:boolean = false;
+            this._storagesConfig.storages.forEach((storage:any) => {
+
+                if(storageData.name.toLowerCase() === storage.storageName.toLowerCase() &&
+                   storageData.type.toLowerCase() === storage.storageType.toLowerCase())
+                {
+                    checkIfStorageAlreadyExists = true;
+                }
+            });
+
+            if(!checkIfStorageAlreadyExists)
+            {
+                this._phpConnectionHelper.insertNewStorage(storageData).subscribe((res:any) => {
+                    let storageId:number = res.json();
+                    this.authorValues.push
+                    (
+                        {
+                            value:   storageId,
+                            caption: storageData.name + ' - ' + storageData.type
+                        }
+                    );
+                    this.newGenreOverlay.hideOverlay();
+                });
+            }
+            else
+            {
+                console.log('already exists');
+            }
+        }
+        else
+        {
+            console.log('inputs leer!');
+        }
     }
 
     public validateAndSaveNewGenreData(name:string):void
@@ -214,9 +302,51 @@ export class NewBookViewComponent implements OnInit
 
     }
 
-    public validateAndSaveNewPublisherData():void
+    public validateAndSaveNewPublisherData(publisherData:PublisherInterface):void
     {
-        //ToDo
+        let checkIfInputIsEmpty:boolean = false;
+
+        if(this.checkIfInputIsEmpty(publisherData.name) && this.checkIfInputIsEmpty(publisherData.website) &&
+           this.checkIfInputIsEmpty(publisherData.email) && this.checkIfInputIsEmpty(publisherData.phoneNumber) &&
+           this.checkIfInputIsEmpty(publisherData.orderNumber))
+        {
+            checkIfInputIsEmpty = true;
+        }
+
+        if(!checkIfInputIsEmpty)
+        {
+            let checkIfStorageAlreadyExists:boolean = false;
+            this._publisherConfig.publishers.forEach((publisher:any) => {
+
+                if(publisherData.name.toLowerCase() === publisher.publisherName.toLowerCase())
+                {
+                    checkIfStorageAlreadyExists = true;
+                }
+            });
+
+            if(!checkIfStorageAlreadyExists)
+            {
+                this._phpConnectionHelper.insertNewPublisher(publisherData).subscribe((res:any) => {
+                    let publisherId:number = res.json();
+                    this.authorValues.push
+                    (
+                        {
+                            value:   publisherId,
+                            caption: publisherData.name + ' - ' + publisherData.orderNumber
+                        }
+                    );
+                    this.newGenreOverlay.hideOverlay();
+                });
+            }
+            else
+            {
+                console.log('already exists');
+            }
+        }
+        else
+        {
+            console.log('inputs leer!');
+        }
     }
 
     private initSuggestionBoxes():void
@@ -313,7 +443,7 @@ export class NewBookViewComponent implements OnInit
         };
         this.authorOverlayButton = {
             caption:       'Save',
-            clickFunction: ():void => this.validateAndSaveNewAuthorData()
+            clickFunction: ():void => this.validateAndSaveNewAuthorData(this.newAuthorData)
         };
         this.ownerOverlayButton = {
             caption:       'Save',
@@ -321,11 +451,11 @@ export class NewBookViewComponent implements OnInit
         };
         this.storageOverlayButton = {
             caption:       'Save',
-            clickFunction: ():void => this.validateAndSaveNewStorageData()
+            clickFunction: ():void => this.validateAndSaveNewStorageData(this.newStorageData)
         };
         this.publisherOverlayButton = {
             caption:       'Save',
-            clickFunction: ():void => this.validateAndSaveNewPublisherData()
+            clickFunction: ():void => this.validateAndSaveNewPublisherData(this.newPublisherData)
         };
     }
 

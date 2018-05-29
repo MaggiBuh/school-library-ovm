@@ -132,14 +132,30 @@
                inputOverlayTitle="Add new author"
                [inputPrimaryButtonInterface]="authorOverlayButton">
     <div>
-        Author
+        <terra-text-input inputName="Firstname"
+                          [(ngModel)]="newAuthorData.firstName">
+        </terra-text-input>
+        <terra-text-input inputName="Lastname"
+                          [(ngModel)]="newAuthorData.lastName">
+        </terra-text-input>
+        <terra-text-input inputName="Email"
+                          [(ngModel)]="newAuthorData.email">
+        </terra-text-input>
+        <terra-text-input inputName="Website"
+                          [(ngModel)]="newAuthorData.website">
+        </terra-text-input>
     </div>
 </terra-overlay>
 <terra-overlay #newStorageOverlay
                inputOverlayTitle="Add new storage"
                [inputPrimaryButtonInterface]="storageOverlayButton">
     <div>
-        Storage
+        <terra-text-input inputName="Name"
+                          [(ngModel)]="newStorageData.name">
+        </terra-text-input>
+        <terra-text-input inputName="Type"
+                          [(ngModel)]="newStorageData.type">
+        </terra-text-input>
     </div>
 </terra-overlay>
 <terra-overlay #newOwnerOverlay
@@ -173,6 +189,20 @@
                inputOverlayTitle="Add new publisher"
                [inputPrimaryButtonInterface]="publisherOverlayButton">
     <div>
-        Publisher
+        <terra-text-input inputName="Name"
+                          [(ngModel)]="newPublisherData.name">
+        </terra-text-input>
+        <terra-text-input inputName="Website"
+                          [(ngModel)]="newPublisherData.website">
+        </terra-text-input>
+        <terra-text-input inputName="Email"
+                          [(ngModel)]="newPublisherData.email">
+        </terra-text-input>
+        <terra-text-input inputName="Phonenumber"
+                          [(ngModel)]="newPublisherData.phoneNumber">
+        </terra-text-input>
+        <terra-text-input inputName="Ordernumber"
+                          [(ngModel)]="newPublisherData.orderNumber">
+        </terra-text-input>
     </div>
 </terra-overlay>
