@@ -9,3 +9,7 @@ This is a School Library App.
 - **Jonathan Bach**
 - **Gero Kurt Gimbel**
 - **Max Hellige**
+
+## Copyright 
+
+**DevRonny**
