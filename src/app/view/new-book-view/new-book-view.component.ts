@@ -150,6 +150,16 @@ export class NewBookViewComponent implements OnInit
                             caption: authorData.firstName + ' ' + authorData.lastName
                         }
                     );
+                    this._authorsConfig.authores.push
+                    (
+                        {
+                            authorId:        authorId,
+                            authorFirstName: authorData.firstName,
+                            authorLastName:  authorData.lastName,
+                            authorEmail:     authorData.email,
+                            authorWebsite:   authorData.website
+                        }
+                    );
                     this.newAuthorOverlay.hideOverlay();
                 });
             }
@@ -261,6 +271,14 @@ export class NewBookViewComponent implements OnInit
                         {
                             value:   storageId,
                             caption: storageData.name + ' - ' + storageData.type
+                        }
+                    );
+                    this._storagesConfig.storages.push
+                    (
+                        {
+                            storageId:   storageId,
+                            storageName: storageData.name,
+                            storageType: storageData.type
                         }
                     );
                     this.newStorageOverlay.hideOverlay();
