@@ -25,5 +25,4 @@ export class PluginTerraBasicComponent implements OnInit
     {
         this._bookDataService.setBookData();
     }
-
 }
